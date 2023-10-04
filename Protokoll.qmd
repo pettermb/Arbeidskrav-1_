@@ -1,0 +1,17 @@
+---
+title: "Arbeidskrav 1"
+format: pdf
+---
+
+Protokoll sykkeltest: 
+
+Generelt om sykkeltest: 
+- Forsøkspersonen sykler på Lode Excaibur
+- Tilnærmet likt tidspunkt på døgnet (+/- 2 timer)
+- Mest mulig lik tilbakemelding og engasjement hver gang 
+  Lite tilbakemeldinger under de submaksimale dragene, og    mye engasjement under VO2maks-test (spesielt mot slutten)
+- Ingen opplysninger om VO2 underveis, men de får vite      wattbelastning, samt se tiden og tråkkfrekvens underveis i  makstesten
+- Hele testen gjennomføres sittende
+- Noter ned hvor mye forsøkspersonen drikker underveis på    testene (og repeter ved post-test)
+
+
