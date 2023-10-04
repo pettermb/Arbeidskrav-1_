@@ -9,13 +9,14 @@ format:
 library(tidyverse)
 
 
-d<-readxl::read_excel("./data/styrke_vo2maks_maod.xlsx")
+d<-readxl::read_excel("./data/styrke_vo2maks_maod.xlsx
+
+                      
+                ")
 
 str(d)
 
 ```
 ```{r}
-data(styre_vo2)
+data(styrke_vo2maks_maod.xlsx)
 ```
-
-gchcucl
