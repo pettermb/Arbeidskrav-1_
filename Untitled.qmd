@@ -5,6 +5,7 @@ format:
     theme: default
 ---
 
+torkil
 ```{r}
 library(tidyverse)
 
@@ -13,6 +14,7 @@ d<-readxl::read_excel("./data/styrke_vo2maks_maod.xlsx
 
                       
                 ")
+
 
 str(d)
 
