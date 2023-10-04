@@ -1,0 +1,34 @@
+---
+title: "Arbeidskrav 1"
+format: html
+    theme: default
+editor_options: 
+  chunk_output_type: console
+---
+
+
+## Laste ned datasettet
+```{r}
+library(tidyverse)
+
+data <-readxl::read_excel("./data/styrke_vo2maks_maod.xlsx")
+
+str(data)
+```
+
+
+Deretter vil vi ha de fleste variablene som numeriske. 
+Hvis ikke blir ikke skjønner ikke r der det er na.
+```{r}
+data |> 
+  transform()
+  
+  
+```
+
+
+
+
+
+
+
