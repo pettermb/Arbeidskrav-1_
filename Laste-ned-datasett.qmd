@@ -9,7 +9,7 @@ editor_options:
 
 ## Laste ned datasettet
 ```{r}
-library(tidyverse)
+library(tidyverse) 
 
 data <-readxl::read_excel("./data/styrke_vo2maks_maod.xlsx")
 
@@ -17,38 +17,27 @@ str(data)
 ```
 
 
-Burde bytte navn på ene variabelen.
+Ønsker å bytte navn på ene variabelen, og velge vekk variablene som 
+omhandler styrketesten. 
 ```{r}
-data <- data |> 
-  rename(percent.aerob = `%.energy.aerob`) 
+sykkeltest <- data |> 
+  rename(percent.aerob = `%.energy.aerob`) |> 
+  select(!`30.W`:`75.N`)
 ```
 
 
 Deretter vil vi ha de fleste variablene som numeriske. 
-Hvis ikke blir ikke skjønner ikke r der det er na. 
+Hvis ikke skjønner ikke r der det er na. 
 
-```{r}
-data <- data |> 
+```{r} 
+sykkeltest <- sykkeltest |> 
   transform(id = as.character(id), 
             hr.max = as.numeric(hr.max), 
-            `30.W` = as.numeric(`30.W`), 
-            `30.N` = as.numeric(`30.N`), 
-            `60.W` = as.numeric(`60.W`), 
-            `60.N` = as.numeric(`60.N`), 
-            `75.W` = as.numeric(`75.W`), 
-            `75.N` = as.numeric(`75.N`), 
             acc.o2.consumption = as.numeric(acc.o2.consumption), 
             acc.o2.debt = as.numeric(acc.o2.debt), 
             percent.aerob = as.numeric(percent.aerob)) 
   
 ```
-
-
-```{r}
-data <- data |> 
-  rename(percent.aerob = `%.energy.aerob`) 
-```
-
 
 
 
