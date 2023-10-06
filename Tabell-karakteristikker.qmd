@@ -27,23 +27,26 @@ tabell_1 <- sykkeltest |>
          miss_val = sum(is.na(verdier)), 
          n = n(),
          .by = variabler) |> 
-  print() 
+  print()
 ```
 
+Ønsker å sette variablene som faktorer og navngi dem og velge ut de vi er interessert i. Får opp en tabell, men får opp NA. Dette kan man lese om ved å skrive ?factor(), men løser det ikke ved å bruke argumentet exclude = NULL. 
+Kanskje vi må bruke select(), i forrige code chunk og heller bare velge de variablene vi ønsker i tabellen der?
 ```{r}
 tabell_1 |> 
-  select(variabler:sd)
+  select(variabler:sd) |> 
   mutate(variabler = factor(variabler, 
                            levels = c("age", "bodyheight", 
                                       "bodymass", 
                                       "w.max", 
                                       "vo2.rel.max", 
                                       "vo2.max"), 
-                           labels = c("Alder", "Høyde (cm)", 
-                                      "Vekt (kg)", 
+                           labels = c("Alder", "Height", 
+                                      "Vekt", 
                                       "W.maks", 
                                       "Relativt oksygenopptak", 
-                                      "Absolutt oksygenopptak"))) |> 
+                                      "Absolutt oksygenopptak"), 
+                           exclude = NULL)) |> 
   gt() 
 ```
 
