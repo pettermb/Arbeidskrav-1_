@@ -11,14 +11,13 @@ editor_options:
 ```{r}
 library(tidyverse) 
 
-data <-readxl::read_excel("./data/styrke_vo2maks_maod.xlsx")
+data <- readxl::read_excel("./data/styrke_vo2maks_maod.xlsx")
 
 str(data)
 ```
 
 
-Ønsker å bytte navn på ene variabelen, og velge vekk variablene som 
-omhandler styrketesten. 
+Ønsker å bytte navn på ene variabelen, og velge vekk variablene som omhandler styrketesten. 
 ```{r}
 sykkeltest <- data |> 
   rename(percent.aerob = `%.energy.aerob`) |> 
@@ -36,9 +35,6 @@ sykkeltest <- sykkeltest |>
             acc.o2.consumption = as.numeric(acc.o2.consumption), 
             acc.o2.debt = as.numeric(acc.o2.debt), 
             percent.aerob = as.numeric(percent.aerob)) 
-  
 ```
-
-
 
 
