@@ -2,15 +2,6 @@
 title: "Karakteristikker forsøkspersonene"
 format: html
 editor: visual
----
-
-```{r}
-sykkeltest |> 
-  filter(timepoint == "t1") |> 
-  pivot_longer(names_to = "variable", 
-               values_to = "value", 
-               cols = age:percent.aerob) |> 
-  head() 
-```
+--- 
 
 
