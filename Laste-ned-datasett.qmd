@@ -9,7 +9,7 @@ editor_options:
 
 ## Laste ned datasettet
 ```{r}
-library(tidyverse) 
+library(tidyverse)
 
 data <- readxl::read_excel("./data/styrke_vo2maks_maod.xlsx")
 
