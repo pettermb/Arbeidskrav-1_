@@ -7,7 +7,7 @@ editor_options:
 ---
 
 
-## Laste ned datasettet
+## Laste ned datasettet 
 ```{r}
 library(tidyverse)
 
