@@ -11,12 +11,10 @@ Generelt om sykkeltest:
 -   Forsøkspersonen sykler på Lode Excaibur
 -   Tilnærmet likt tidspunkt på døgnet (+/- 2 timer)
 -   Mest mulig lik tilbakemelding og engasjement hver gang
--   Lite tilbakemeldinger under de submaksimale dragene, og mye engasjement under VO2maks-test
-    (spesielt mot slutten)
--   Ingen opplysninger om VO2 underveis, men de får vite wattbelastning,samt se tiden og
+    -   Lite tilbakemeldinger under de submaksimale dragene, og mye engasjement under VO2maks-test
+        (spesielt mot slutten)
+-   Ingen opplysninger om VO2 underveis, men de får vite wattbelastning, samt se tiden og
     tråkkfrekvens underveis i makstesten
--   Hele testen gjennomføres sittende
--   Noter ned hvor mye forsøkspersonen drikker underveis på testene (og repeter ved post-test)
 
 Forberedelser:
 
@@ -51,6 +49,7 @@ Forberedelser:
         -   Dersom godkjent, trykk "F12" for å lagre
     -   Sett sammen munnstykket og finn fram neseklype
     -   Gjør klart slange og teip til å feste slangen til sykkelen
+-   Ta vekta til personen (uten sykkelsko), og trekk fra 0,3 kg
     -   Legg inn personen på data
         -   Trykk "New Patient"
         -   Før inn etternavn, fornavn, id (initialer og fødselsdato uten punktum), fødselsdato,
@@ -134,8 +133,28 @@ Tiltak for å sikre god reliabilitet:
 -   Tråkkfrekvensen ved første submaksimale belastningstrinn skal gjentas ved MAOD-testen og ved
     både de submaksimale trinnene og MAOD-testen på test 2
 -   Samme testleder for hver enkelt forsøksperson ved begge tester
--   Siste måltid (og eventuelle mellommåltid) før test skal være likt, og til samme tidspunkt
 -   Godkjent kalibrering av volum og luft settes til +/- 1,0
--   Bare rolig trening mellom hver test
+-   Lik belastning og lengde på pause før MAOD-test begge dager
+-   Testene gjennomføres på omtrent samme tidspunkt for hver forsøksperson
+-   Hele testen gjennomføres sittende
+
+Forberedelser til deltakerne:
+
 -   Ingen hard trening dagen før test
-- Lik belastning og lengde på pause før MAOD-test begge dager
+-   Bare rolig trening mellom hver test
+-   Siste måltid (og eventuelle mellommåltid) før test skal være likt, og til samme tidspunkt (+/- 2
+    timer)
+
+Behandling av data:
+
+-   Etter gjennomført tester må vi samle inn dataen vi skal bruke for å gjøre statistiske analyser
+-   Vi noterer ned VO2 etter de submaksimale dragene
+-   Vi regner ut VO2.rel.max og VO2.max under VO2maks-testen
+-   Samtidig noterer vi ned andre verdifulle målinger etter test, slik som hr.max, W.max, rer.max,
+    bf.max, V'E.max hvor lenge personen syklet, og hvilken watt personen avsluttet på og opplevd
+    anstrengelse (Borg)
+-   Etter MAOD-testen regner vi ut VO2.max, oksygenkravet ved belastning under MAOD-test (L/min),
+    det totale okysgenkravet som må dekkes (L), akkumulert oksygenopptak på testene (L), akkumulert
+    oksygengjeld og prosent av arbeidet som dekkes anaerobt (%)
+-   Samtidig noterer vi ned hvor lenge personen syklet (i sek) og opplevd anstrengelse (Borg) og
+    hr.max
