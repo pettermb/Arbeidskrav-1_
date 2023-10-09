@@ -10,11 +10,19 @@ editor_options:
 ## Laste ned datasettet 
 ```{r}
 library(tidyverse)
+library(gt)
+library(exscidata)
+library(readxl)
+dataset <- read_excel(reablitet)
+View(dataset)
 
-data <- readxl::read_excel("./data/styrke_vo2maks_maod.xlsx")
+data <- readxl::read_excel(reablitet)
 
-str(data)
+```{r}
+
 ```
+
+
 
 
 Ønsker å bytte navn på ene variabelen, og velge vekk variablene som omhandler styrketesten. 
