@@ -28,17 +28,16 @@ reablitet %>%
                   w.max = mean(w.max),
                   V02maks = mean(vo2.rel.max)) %>%
   gt()
-  
-  
+```
 
 
+```{r}
 Ønsker å bytte navn på ene variabelen, og velge vekk variablene som omhandler styrketesten. 
 ```{r}
 sykkeltest <- data |> 
   rename(percent.aerob = `%.energy.aerob`) |> 
   select(!`30.W`:`75.N`)
 ```
-
 
 Deretter vil vi ha de fleste variablene som numeriske. 
 Hvis ikke skjønner ikke r der det er na. 
