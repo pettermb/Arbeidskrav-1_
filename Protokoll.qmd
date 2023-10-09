@@ -6,6 +6,10 @@ editor:
     wrap: 100
 ---
 
+
+
+dett er test for petter
+
 Generelt om sykkeltest:
 
 -   Forsøkspersonen sykler på Lode Excaibur
@@ -158,3 +162,5 @@ Behandling av data:
     oksygengjeld og prosent av arbeidet som dekkes anaerobt (%)
 -   Samtidig noterer vi ned hvor lenge personen syklet (i sek) og opplevd anstrengelse (Borg) og
     hr.max
+    
+    o,
