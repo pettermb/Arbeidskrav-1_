@@ -1,5 +1,5 @@
 ---
-title: "Arbeidskrav 1"
+title: "Protokoll"
 format: pdf
 editor: 
   markdown: 
@@ -12,36 +12,22 @@ til å gjennomføre laboratorietester.
 
 ## Metode 
 
-Deltakere: 7 mannlige deltaker ble rekruttert til prosjektet( Gjennomsnitts alder 25,71 år.
-Kroppshøgde 181,28 og med e kroppsvekt 75, 72 kg). Dette var alle personer som trener regelmessig,
-men deres erfaring med testing på sykkel og trening på sykkel variert innad i gruppen.
+### Forsøkspersonene 
+Syv mannlige deltaker ble rekruttert til prosjektet (alder = 25,7 år +/- 7, vekt = 75, 7 kg +/- 10,8 kg, høyde = 181,3 cm +/- 6,7 cm). Alle deltakerne trener regelmessig, men erfaring med trening på sykkel varierte innad i gruppa. Det var ingen av deltakerne som hadde noe særlig erfaring med sykkeltestene vi gjennomførte.
 
-Testing Prosjektets testdager besto av 4 dager, der halvparten av gruppa ble testa vær dag. Test dag
-1 og 2 var test 1(t1) og test dag 3 og 4 var (t2). Med dette sikra vi at alle testpersonene fikk en
-dag mellom test 1 og test 2. På hviledagen fikk alle personene beskjed om at de kunne trene va de
-ville av rolig trening. Dette for å sikre at de ikke fikk utvikling på hviledagen. For alle
-deltakerne ble det prøvd å gjøre testdag 1 og 2 helt identiske.
+### Studiedesign 
+Prosjektets testdager bestod av fire dager. Halvparten av gruppa ble testet hver dag, slik at deltakerne hadde én rolig dag mellom sine egne tester. Testdag 1 og 2 ble gjennomført som t1, mens testdag 3 og 4 ble gjennomført som t2. På hviledagen fikk alle personene beskjed om at de kunne trene hva de selv ønsket av rolig trening. Dette for å sikre at de var tilnærmet likt restituert før hver test. For alle deltakerne ble det forsøkt å gjøre dagene til t1 og t2 så identiske som mulig, så testene ble gjennomført på tilnærmet likt tidspunkt begge dagene (+/- 2 timer). 
 
-For vær deltaker startet testdagen med en 7 min lang oppvarming på ergometer sykkel, med en gradvis
-økning i opplevd anstrengelse(Borg). Objektene syklet 3 min på 11, 2 min på 13 og 2 min på 15/16 i
+Deltakerne starten med en 7 minutters lang oppvarming på ergometer sykkel, med en gradvis økning i intensitet i form av opplevd anstrengelse (Borg). De syklet 3 min på 11-, 2 min på 13- og 2 min på 15/16- i
 Borg.
 
-Del 1: Styrke Styrketesten som var enn knebøy power test. Denne besto av et oppvarmingssett, der
-personen gjennomførte tre løft med bare stang. For å måle kraftutviklingen ble det brukt en
-Muselabb(?) Selve testen ble gjennomført ved en ytre belastning som var 30 %, 60 % og 75 % av egen
-kroppsvekt. Deltakerne fikk tre forsøk per belastning, der det beste forsøket per belastning ble
-stående som tellende.
+Del 1 styrketest: Etter oppvarming gjennomførte deltakerne en kort styrketest, i form av knebøy power test. Den bestod av tre løft med 20 kg, tre løft med henholdsvis 30-, 60- og 75 % av egen kroppsvekt. Målet var å gjennomføre løftet så huritig som mulig, og kraftutviklingen ble målt med en muselabb(?). Beste forsøk på hver belastning ble tellende. 
 
-Del 2 sykkel Etter styrketest ble forsøkspersone tatt rett inn til sykkeltest. Her gjennomførte de
-en tredelt test, som besto av 2 submaksimale drag, Vo2max test og en MAOD-test.
+Del 2 sykkeltester: Deltakerne gikk direkte fra styrketesten til sykkeltestene. Her gjennomførte de
+en tredelt test, som bestod av to submaksimale drag, en Vo2max-test og en MAOD-test. Testene ble gjennomført på Lode Excaibur. 
 
-Submaksimale drag: Forsøkspersonene gjennomførte to submaksimale drag på 4 min. De submaksimale
-dragene ble sykla på 100 W og på 150 W. For en av forsøkspersonene ble det gjort tilpassninger på W
-motstand for å få en mer opptimal test. Han fikk 75 w på den første belastninger og 125 på den andre
-belastningen. Dette ble gjort på grunn at forsøkspersonen hadde liten erfaring ved testing på
-sykkel. For vært drag starta en med å sykle 1,5 min uten slange i munnen.
+Submaksimale testen bestod av to submasimale drag på fire minutter. For seks av deltakerne ble første belastning på testen gjennomført på 100 W og andre belastning på 150 W, mens én deltaker syklet på 75 W og 125 W. Tilpasningene ble gjort for å få en mer optimal test. Forsøkspersonene syklet med neseklype og munnstykket i de siste to minuttene (begynte å ta i da det hadde gått 1,5 min). Deltakerne skulle holde en tråkkfrekvens på mellom 90 - 100 rpm. Etter dragene var det to minutter pause der deltakerne satt helt i ro. 
 
-TESTTEST
 
 Generelt om sykkeltest:
 
