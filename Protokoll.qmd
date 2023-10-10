@@ -51,7 +51,20 @@ syklet med neseklype og munnstykket i de siste to minuttene (begynte å ta i da 
 min). Deltakerne skulle holde en tråkkfrekvens på mellom 90 - 100 rpm. Etter dragene var det to
 minutter pause der deltakerne satt helt i ro.
 
-VO2maks-testen
+VO2maks-testen startet på 200 W, og økte med 25 W hvert minutt helt til utmattelse. Testen er ferdig
+når tråkkfrekvens er \< 60. Det er fri tråkkfrekvens under hele testen. Neseklype og munnstykket
+skal være i hele testen. Etter avsluttet test får forsøkspersonen 5 minutter pause. Det første
+minuttet etter avsluttet test sitter personen helt i ro, mens de neste fire minuttene sykles rolig
+på 50 W.
+
+MAOD
+
+Pause:
+
+-   Personen får 5 minutter mellom VO2maks-test til start på MAOD-test
+-   Det første minuttet etter avsluttet VO 2maks-test sitter personen helt i ro
+-   4 min pause på 50 W
+-   Valgfri tråkkfrekvens, men skal ha lik ved neste test
 
 Generelt om sykkeltest:
 
@@ -121,18 +134,25 @@ Forberedelser:
 Nå er alt klargjort til å starte sykkeltestene. Testen starter med to submakismale drag:
 
 -   To drag på 4 minutter
+
 -   Drag 1: 80 watt (jenter) og 100 watt (gutter)
+
 -   Etter 1,5 minutt ta i munnstykket og ta på neseklype. Det skal være på plass før det har gått 2
     minutter
+
 -   Forsøkspersonen sykler med neseklype og munnstykket i de siste 2 minuttene (skal ha neseklype og
     munnstykket i før det har gått 2 min)
 
-
 -   Noter ned tråkkfrekvens og puls hvert 30.sekund i plotteskjemaet (regn ut gjennomsnitt)
-- Noter ned opplevd anstrengelse på Borgs-skala
+
+-   Noter ned opplevd anstrengelse på Borgs-skala
+
 -   Nullstill klokka
+
 -   Spør om opplevd anstrengelse på Borgs-skala og noter ned
+
 -   Drag 2: 120 W (jenter) og 150 W (gutter)
+
 -   Gjennomfør andre belastningstrinn på samme måte som beskrevet for det første
 
 Pause:
