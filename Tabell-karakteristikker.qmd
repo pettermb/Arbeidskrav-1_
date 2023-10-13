@@ -26,16 +26,20 @@ reablitet2
 ```
 
 
+
+W. max rekne
+
 ```{r}
 #rekne på datane
 
 library(tidyverse)
 
-reablitet2 <- data.frame(trial1 = c(410.00, 66.23, 1.20, 201.57, 59.21), 
-                           trial2 = c(404.29, 65.60, 1.22, 199.36, 58.07)) 
+w.max <- data.frame(trial1 = c(463, 438, 400, 400, 453, 428, 288), 
+                           trial2 = c(439, 450, 403, 375, 450, 425, 288)) 
 
 # Calculate the typical error. Får berre opp tall i konsoellen 
-reablitet2 %>%
+
+w.max %>%
   mutate(diff = trial2 - trial1) %>% # Change/difference score
   summarise(s = sd(diff),  # Summarize to calculate sd, and... 
             m = mean(c(trial1, trial2)), # mean
@@ -43,13 +47,87 @@ reablitet2 %>%
             cv = round(100 * (te / m), 1), # Calculate as a percentage of the mean
             upr.L = mean(diff) + qt(0.975, 4) * s, 
             lwr.L = mean(diff) - qt(0.975, 4) * s) %>% 
-  print()
+gt()
+```
+
+typical error vo2.rel.max
+```{r}
+vo2.rel.max <- data.frame(trial1 = c(72.95, 69.67, 62.56, 70.65, 71.41, 63.94, 52.40), 
+                           trial2 = c(72.32, 72.22, 62.92, 70.58, 65.98, 62.95, 52.26)) 
+
+# Calculate the typical error. Får berre opp tall i konsoellen 
+
+vo2.rel.max %>%
+  mutate(diff = trial2 - trial1) %>% # Change/difference score
+  summarise(s = sd(diff),  # Summarize to calculate sd, and... 
+            m = mean(c(trial1, trial2)), # mean
+            te = round(s / sqrt(2), 1), # the typical error.
+            cv = round(100 * (te / m), 1), # Calculate as a percentage of the mean
+            upr.L = mean(diff) + qt(0.975, 4) * s, 
+            lwr.L = mean(diff) - qt(0.975, 4) * s) %>% 
+gt()
+```
+
+typical error of rer.max
+```{r}
+rer.max <- data.frame(trial1 = c(1.17, 1.18, 1.24, 1.24, 1.09, 1.21, 1.30), 
+                           trial2 = c(1.17, 1.21, 1.26, 1.23, 1.15, 1.17, 1.35)) 
+
+# Calculate the typical error. Får berre opp tall i konsoellen 
+
+rer.max %>%
+  mutate(diff = trial2 - trial1) %>% # Change/difference score
+  summarise(s = sd(diff),  # Summarize to calculate sd, and... 
+            m = mean(c(trial1, trial2)), # mean
+            te = round(s / sqrt(2), 1), # the typical error.
+            cv = round(100 * (te / m), 1), # Calculate as a percentage of the mean
+            upr.L = mean(diff) + qt(0.975, 4) * s, 
+            lwr.L = mean(diff) - qt(0.975, 4) * s) %>% 
+gt()
 ```
 
 
+VE MAX
 
 ```{r}
-#tabbek for beskrivelse av forsøkspersoner
+ve.max <- data.frame(trial1 = c(217.0, 209.5, 217.0, 184.5, 197.5, 206.5, 179.0), 
+                           trial2 = c(213.5, 230.0, 200.5, 187.0, 192.5, 201.0, 171.0)) 
+
+# Calculate the typical error. Får berre opp tall i konsoellen 
+
+ve.max %>%
+  mutate(diff = trial2 - trial1) %>% # Change/difference score
+  summarise(s = sd(diff),  # Summarize to calculate sd, and... 
+            m = mean(c(trial1, trial2)), # mean
+            te = round(s / sqrt(2), 1), # the typical error.
+            cv = round(100 * (te / m), 1), # Calculate as a percentage of the mean
+            upr.L = mean(diff) + qt(0.975, 4) * s, 
+            lwr.L = mean(diff) - qt(0.975, 4) * s) %>% 
+gt()
+```
+
+BF max
+```{r}
+bf.max <- data.frame(trial1 = c(59.0, 55.0, 73.0, 53.0, 56.0, 56.0, 62.5 ), 
+                           trial2 = c(58.0, 66.0, 63.0, 55.5, 54.5, 56.5, 53.0)) 
+
+# Calculate the typical error. Får berre opp tall i konsoellen 
+
+bf.max %>%
+  mutate(diff = trial2 - trial1) %>% # Change/difference score
+  summarise(s = sd(diff),  # Summarize to calculate sd, and... 
+            m = mean(c(trial1, trial2)), # mean
+            te = round(s / sqrt(2), 1), # the typical error.
+            cv = round(100 * (te / m), 1), # Calculate as a percentage of the mean
+            upr.L = mean(diff) + qt(0.975, 4) * s, 
+            lwr.L = mean(diff) - qt(0.975, 4) * s) %>% 
+gt()
+```
+
+Tabbel som beskriver forsøkspersoner
+
+```{r}
+
 reablitet2 %>%
   select (timepoint, age, bodyheight, bodymass)%>%
   summarise(Alder = mean(age) ,
@@ -63,10 +141,10 @@ cols_label(Alder= md("Alder<br><small>(år)"),
            Vekt = md("Vekt<br><small>(KG)")) 
 ```
 
-
+Gjennomsnitt t1 og t2
 
 ```{r}
-#Gjennomsnittet t1 og t2 for alle
+
 reablitet2 %>%
   select (timepoint, hr.max, w.max, vo2.rel.max, rer.max, ve.max, bf.max)%>%
   group_by(timepoint)%>%
@@ -75,44 +153,42 @@ reablitet2 %>%
           RER = mean(rer.max) ,
           VE = mean(ve.max) ,
           BF = mean(bf.max)) %>%
-  gt(caption = "Testtest")%>%
-  fmt_number(columns = w.max:BF)%>%
-  fmt_number(columns = w.max,
+  gt(caption = md("VO<sub>2max Test"))%>%
+  fmt_number(columns = w.max:BF,
              decimals = 1)%>%
   cols_label(timepoint = "Tidspunkt",
-               w.max = md("W.maks<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"),
-               VO2maks = md("VO<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"),
-               RER = md("RER<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"),
-               VE = md("VE<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"),
-               BF = md("BF<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"))%>%
-    tab_header(title = "Gjennomsnitt verdier")
-    
-```
+               w.max = md("W<sub>max</sub><br><small>"),
+               VO2maks = md("VO<sub>2max</sub><br><small>(ml/kg/min<sup>-1</sup>)"),
+               RER = md("RER"),
+               VE = md("VE<sub></sub><br><small>(l/min<sup>-1</sup>)"),
+               BF = md("BF"))%>%
+    tab_header(title = "Gjennomsnitt for t1 og t2")
+    ```
 
-
-```{r}
 #Tabell med kvart enkelt data per forsøksperson
+```{r}
 reablitet2 %>%
   select (id, timepoint, hr.max, w.max, vo2.rel.max, rer.max, ve.max, bf.max)%>%
   group_by(timepoint)%>%
-  gt(caption = "Testtest")%>%
+  gt(caption = "Alle testdata for kvar enkelt person")%>%
   fmt_number(columns = w.max:bf.max,
              decimals=1)%>%
   cols_label(timepoint = "Tidspunkt",
-             hr.max = md("Maks puls(ml min<sup>-1</sup>)"),
-             w.max = md("W.maks(W)"),
+             hr.max = md("HR<sub>max</sub><br><small>"),
+             w.max = md("W<sub>max</sub><br><small>"),
              vo2.rel.max = md("VO<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"),
-             rer.max = md("RER<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"),
-             ve.max = md("VE<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"),
-             bf.max = md("BF<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"))%>%
-  tab_header(title = "Gjennomsnitt verdier")
+             rer.max = md("RER"),
+             ve.max = md("VE<sub></sub><br><small>(l/min<sup>-1</sup>)"),
+             bf.max = md("BF"))%>%
+  tab_header(title = "VO2maks test")
  
 ```
                     
             
+Best forsøk på tabbel så langt
 
 ```{r}
-#graf med punkter
+
 ggplot(data = reablitet2, aes(x = w.max, 
                                 y = vo2.rel.max, 
                                 color = timepoint)) + 
@@ -124,7 +200,7 @@ ggplot(data = reablitet2, aes(x = w.max,
        caption = "This is a caption", 
        color = "This is the group aesthetics") +
   
-  annotate(geom = "text", x = 10, y = 80, label = "This is a text annotation")
+  annotate(geom = "text", x = 200, y = 50, label = "This is a text annotation")
 
 ```
                
@@ -137,33 +213,4 @@ ggplot(data = reablitet2, aes(x = w.max,
   geom_point() +
   facet_wrap(~ timepoint)
 ```
-
-
-
-
-
-```{r}
-#forslag 2. Med forskjellige farge skala
-ggplot(data = reablitet2, 
-       aes(x = w.max, y = vo2.rel.max, color = rer.max)) + 
-  geom_point() +
-  scale_colour_gradient(
-    low = "#e41a1c",  
-    high = "#4daf4a")
-```
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> eb24855ca0323199b27886b76c9ac38f2dbcd115
-
-
-
 
