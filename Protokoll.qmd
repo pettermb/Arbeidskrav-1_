@@ -19,32 +19,6 @@ kg, høyde = 181,3 cm +/- 6,7 cm). Alle deltakerne trener regelmessig, men erfar
 sykkel varierte innad i gruppa. Det var ingen av deltakerne som hadde noe særlig erfaring med
 sykkeltestene vi gjennomførte. 
 
-```{r}
-
-library(tidyverse)
-library(ggplot2)
-library(readxl)
-library(exscidata)
-library(gt)
-
-reablitet2
-
-
-#tabbek for beskrivelse av forsøkspersoner
-reablitet2 %>%
-  select (timepoint, age, bodyheight, bodymass)%>%
-  summarise(Alder = mean(age) ,
-            Høgde = mean(bodyheight) , 
-            Vekt = mean(bodymass)) %>%
-  gt(caption = "Forsøkspersoner")%>%
-  fmt_number(columns = Alder:Vekt, 
-             decimals = 1) %>%
-cols_label(Alder= md("Alder<br><small>(år)"),
-           Høgde = md("Høgde<br><small>(CM)"),
-           Vekt = md("Vekt<br><small>(KG)")) 
-```
-
-
 ### Studiedesign
 
 Prosjektets testdager bestod av fire dager. Halvparten av gruppa ble testet hver dag, slik at
@@ -99,8 +73,13 @@ MAOD-testens startwatt baserte seg på VO2maks-testen. Startwatt på MAOD-testen
 
 ### Tiltak for å sikre god reliabilitet
 
-Vi gjorde flere tiltak for å sikre best mulig reliabilitet. For det første ble begge testene for hver enkelt forsøksperson avholdt på omtrent samme tidspunkt (+/- 2 timer). Vi ga beskjed om at de bare kunne trene rolig dagen før t1, og dagen i mellom testene. På den måten sikret vi at ingen var treningspåvirket og forhåpentligvis likt restituert foran hver test. Deltakerne fikk også beskjed om at siste måltid før begge testene skulle være likt, og til omtrent samme tid. 
-Tråkkfrekvensen ved første submaksimale belastningstrinn skulle gjentas ved MAOD-resten, og kopieres ved t2. Det var samme testleder for hver enkelt forsøksperson ved begge tester. Det var lik belastning og lengde på pause før hver MAOD-test begge dager uansett utfall på VO2maks-testen. I tillegg ble hele testen gjennomført sittende. 
+For å sikre en god reliabilitet på de fysiologiske testene gjorde vi flere tiltak for å redusere risikoen for forstyrrende variabler som kan påvirke resultatmålene. For det første ble begge testene kjørt på nøyaktig samme måte, med en standardisert protokoll. Testene for hver forsøksperson ble avholdt på omtrent samme tidspunkt (+/- 2 timer). Vi ga også beskjed om at de bare kunne trene rolig dagen før t1, og dagen i mellom testene. På den måten sikret vi at ingen var treningspåvirket og forhåpentligvis likt restituert før hver test. Deltakerne fikk også beskjed om at siste måltid før begge testene skulle være like, og til omtrent samme tidspunkt.
+
+Vi kjørte også samme tråkkfrekvensen ved første submaksimale belastningstrinn og ved MAOD-resten, og dette ble kopiert ved t2. Det var lik belastning og lengde på pause før hver MAOD-test begge dager uansett utfall på VO2maks-testen. I tillegg ble hele sykkeltesten gjennomført sittende.  
+
+Vi valgte også å ha samme testleder for hver enkelt forsøksperson ved både t1 og t2. Den muntlige oppmuntringen og tilbakemeldingene underveis på testene var lik, og vi sørget for å gi like instruksjoner om utførelsen av testene og målet med hver test.  
+
+Det ble også kjørt kalibrering av maskinene før hver test, og vi satte godkjent kalibrering på volum til 1%, og godkjent kalibrering av gas med en feilmargin på maksimalt 1.0.  
 
 
 ### Datainnsamling og -behandling
