@@ -6,49 +6,152 @@ editor_options:
   chunk_output_type: console
 ---
 
+title: "Arbeidskrav 1"
+format: html
+theme: default
+editor_options: 
+  chunk_output_type: console
+---
 
-Start med å få tilgang til gt() funksjonen for å lage figurer.
 ```{r}
 library(gt)
+library(exscidata)
+library(readxl)
+library(ggplot2)
+library(tidyverse)
+reablitet2
+
 ```
 
 
-Ønsker å ha variabler nedover første kolonne i tabellen. Derfor gjør vi litt pivoting også ønsker vi senere gjennomsnittsverdier for variablene i en kolonne og standardavvik i en annen. Da kan vi senere slå sammen gjennomsnitt og standardavvik i samme kolonne i tabellen vår. 
-
 ```{r}
-tabell_1 <- sykkeltest |> 
-  filter(timepoint == "t1") |> 
-  pivot_longer(names_to = "variabler", 
-               values_to = "verdier", 
-               cols = age:percent.aerob) |> 
-  
-  summarise(m = mean(verdier, na.rm = TRUE), 
-         sd = sd(verdier, na.rm = TRUE), 
-         miss_val = sum(is.na(verdier)), 
-         n = n(),
-         .by = variabler) |> 
+#rekne på datane
+
+library(tidyverse)
+
+reablitet2 <- data.frame(trial1 = c(410.00, 66.23, 1.20, 201.57, 59.21), 
+                           trial2 = c(404.29, 65.60, 1.22, 199.36, 58.07)) 
+
+# Calculate the typical error. Får berre opp tall i konsoellen 
+reablitet2 %>%
+  mutate(diff = trial2 - trial1) %>% # Change/difference score
+  summarise(s = sd(diff),  # Summarize to calculate sd, and... 
+            m = mean(c(trial1, trial2)), # mean
+            te = round(s / sqrt(2), 1), # the typical error.
+            cv = round(100 * (te / m), 1), # Calculate as a percentage of the mean
+            upr.L = mean(diff) + qt(0.975, 4) * s, 
+            lwr.L = mean(diff) - qt(0.975, 4) * s) %>% 
   print()
 ```
 
-Ønsker å sette variablene som faktorer og navngi dem og velge ut de vi er interessert i. Får opp en tabell, men får opp NA. Dette kan man lese om ved å skrive ?factor(), men løser det ikke ved å bruke argumentet exclude = NULL. 
-Kanskje vi må bruke select(), i forrige code chunk og heller bare velge de variablene vi ønsker i tabellen der?
+
+
 ```{r}
-tabell_1 |> 
-  select(variabler:sd) |> 
-  mutate(variabler = factor(variabler, 
-                           levels = c("age", "bodyheight", 
-                                      "bodymass", 
-                                      "w.max", 
-                                      "vo2.rel.max", 
-                                      "vo2.max"), 
-                           labels = c("Alder", "Height", 
-                                      "Vekt", 
-                                      "W.maks", 
-                                      "Relativt oksygenopptak", 
-                                      "Absolutt oksygenopptak"), 
-                           exclude = NULL)) |> 
-  gt() 
+#tabbek for beskrivelse av forsøkspersoner
+reablitet2 %>%
+  select (timepoint, age, bodyheight, bodymass)%>%
+  summarise(Alder = mean(age) ,
+            Høgde = mean(bodyheight) , 
+            Vekt = mean(bodymass)) %>%
+  gt(caption = "Forsøkspersoner")%>%
+  fmt_number(columns = Alder:Vekt, 
+             decimals = 1) %>%
+cols_label(Alder= md("Alder<br><small>(år)"),
+           Høgde = md("Høgde<br><small>(CM)"),
+           Vekt = md("Vekt<br><small>(KG)")) 
 ```
+
+
+
+```{r}
+#Gjennomsnittet t1 og t2 for alle
+reablitet2 %>%
+  select (timepoint, hr.max, w.max, vo2.rel.max, rer.max, ve.max, bf.max)%>%
+  group_by(timepoint)%>%
+  summarise(w.max = mean(w.max) ,
+          VO2maks = mean(vo2.rel.max) , 
+          RER = mean(rer.max) ,
+          VE = mean(ve.max) ,
+          BF = mean(bf.max)) %>%
+  gt(caption = "Testtest")%>%
+  fmt_number(columns = w.max:BF)%>%
+  fmt_number(columns = w.max,
+             decimals = 1)%>%
+  cols_label(timepoint = "Tidspunkt",
+               w.max = md("W.maks<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"),
+               VO2maks = md("VO<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"),
+               RER = md("RER<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"),
+               VE = md("VE<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"),
+               BF = md("BF<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"))%>%
+    tab_header(title = "Gjennomsnitt verdier")
+    
+```
+
+
+```{r}
+#Tabell med kvart enkelt data per forsøksperson
+reablitet2 %>%
+  select (id, timepoint, hr.max, w.max, vo2.rel.max, rer.max, ve.max, bf.max)%>%
+  group_by(timepoint)%>%
+  gt(caption = "Testtest")%>%
+  fmt_number(columns = w.max:bf.max,
+             decimals=1)%>%
+  cols_label(timepoint = "Tidspunkt",
+             hr.max = md("Maks puls(ml min<sup>-1</sup>)"),
+             w.max = md("W.maks(W)"),
+             vo2.rel.max = md("VO<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"),
+             rer.max = md("RER<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"),
+             ve.max = md("VE<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"),
+             bf.max = md("BF<sub>2max</sub><br><small>(ml min<sup>-1</sup>)"))%>%
+  tab_header(title = "Gjennomsnitt verdier")
+ 
+```
+                    
+            
+
+```{r}
+#graf med punkter
+ggplot(data = reablitet2, aes(x = w.max, 
+                                y = vo2.rel.max, 
+                                color = timepoint)) + 
+  geom_point() +
+  labs(x = "w.max", 
+       y = "V02maks (ml/kg", 
+       title = "This is the title", 
+       subtitle = "This is the subtitle", 
+       caption = "This is a caption", 
+       color = "This is the group aesthetics") +
+  
+  annotate(geom = "text", x = 10, y = 80, label = "This is a text annotation")
+
+```
+               
+               
+```{r}
+# forslag til forskjelliger graf - 2 delte graver, men i samme
+ggplot(data = reablitet2, aes(x = w.max, 
+                              y = vo2.rel.max, 
+                              color = timepoint)) + 
+  geom_point() +
+  facet_wrap(~ timepoint)
+```
+
+
+
+
+
+```{r}
+#forslag 2. Med forskjellige farge skala
+ggplot(data = reablitet2, 
+       aes(x = w.max, y = vo2.rel.max, color = rer.max)) + 
+  geom_point() +
+  scale_colour_gradient(
+    low = "#e41a1c",  
+    high = "#4daf4a")
+```
+
+
+
 
 
 
