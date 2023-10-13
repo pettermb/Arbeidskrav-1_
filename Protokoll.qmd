@@ -25,7 +25,7 @@ Prosjektets testdager bestod av fire dager. Halvparten av gruppa ble testet hver
 deltakerne hadde én rolig dag mellom sine egne tester. Testdag 1 og 2 ble gjennomført som t1, mens
 testdag 3 og 4 ble gjennomført som t2. På hviledagen fikk alle deltakerne beskjed om at de kunne
 trene hva de selv ønsket av rolig trening. Dette for å sikre at de var tilnærmet likt restituert før
-hver test, slik at ikke treningen dagen før skulle påvirke resultatet på testen. For alle deltakerne ble det forsøkt å gjøre testdagene så identiske som mulig i form av at forsøkspersonene fikk samme testleder på hver test, likt tidspunkt på døgnet, beskjed om likt måltid og tidspunkt før test.
+hver test, slik at ikke treningen dagen før skulle påvirke resultatet på testen. For alle deltakerne ble det forsøkt å gjøre testdagene så identiske som mulig i form av at forsøkspersonene fikk samme testleder på hver test, likt tidspunkt på døgnet, beskjed om likt måltid og tidspunkt før test. 
 
 ### Kalibrering - klargjøring til test
 
