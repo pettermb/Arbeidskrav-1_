@@ -17,7 +17,33 @@ Vi skulle rekruttere åtte personer til å gjennomføre en styrketest i form av 
 Syv mannlige deltaker ble rekruttert til prosjektet (alder = 25,7 år +/- 7, vekt = 75, 7 kg +/- 10,8
 kg, høyde = 181,3 cm +/- 6,7 cm). Alle deltakerne trener regelmessig, men erfaring med trening på
 sykkel varierte innad i gruppa. Det var ingen av deltakerne som hadde noe særlig erfaring med
-sykkeltestene vi gjennomførte.
+sykkeltestene vi gjennomførte. 
+
+```{r}
+
+library(tidyverse)
+library(ggplot2)
+library(readxl)
+library(exscidata)
+library(gt)
+
+reablitet2
+
+
+#tabbek for beskrivelse av forsøkspersoner
+reablitet2 %>%
+  select (timepoint, age, bodyheight, bodymass)%>%
+  summarise(Alder = mean(age) ,
+            Høgde = mean(bodyheight) , 
+            Vekt = mean(bodymass)) %>%
+  gt(caption = "Forsøkspersoner")%>%
+  fmt_number(columns = Alder:Vekt, 
+             decimals = 1) %>%
+cols_label(Alder= md("Alder<br><small>(år)"),
+           Høgde = md("Høgde<br><small>(CM)"),
+           Vekt = md("Vekt<br><small>(KG)")) 
+```
+
 
 ### Studiedesign
 
