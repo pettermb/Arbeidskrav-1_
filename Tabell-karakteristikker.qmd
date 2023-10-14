@@ -124,22 +124,28 @@ bf.max %>%
 gt()
 ```
 
-Tabbel som beskriver forsøkspersoner
+Tabell som beskriver forsøkspersoner
 
 ```{r}
 
 reablitet2 %>%
-  select (timepoint, age, bodyheight, bodymass)%>%
-  summarise(Alder = mean(age) ,
-            Høgde = mean(bodyheight) , 
+  select(timepoint, age, bodyheight, bodymass) %>%
+  summarise(Alder = mean(age),
+            Høgde = mean(bodyheight), 
             Vekt = mean(bodymass)) %>%
-  gt(caption = "Forsøkspersoner")%>%
+  gt(caption = "Forsøkspersoner") %>%
   fmt_number(columns = Alder:Vekt, 
-             decimals = 1) %>%
-cols_label(Alder= md("Alder<br><small>(år)"),
-           Høgde = md("Høgde<br><small>(CM)"),
-           Vekt = md("Vekt<br><small>(KG)")) 
+             decimals = 2) %>%
+cols_label(Alder = md("Alder<br><small>(år)"),
+           Høgde = md("Høgde<br><small>(cm)"),
+           Vekt = md("Vekt<br><small>(kg)"))
 ```
+
+```{r} 
+Sys.setlocale(category = "LC_ALL", locale = "en_US.UTF-8")
+
+```
+
 
 Gjennomsnitt t1 og t2
 
@@ -162,7 +168,7 @@ reablitet2 %>%
                RER = md("RER"),
                VE = md("VE<sub></sub><br><small>(l/min<sup>-1</sup>)"),
                BF = md("BF"))%>%
-    tab_header(title = "Gjennomsnitt for t1 og t2")
+    tab_header(title = "Gjennomsnitt for t1 og t2") 
     ```
 
 #Tabell med kvart enkelt data per forsøksperson
