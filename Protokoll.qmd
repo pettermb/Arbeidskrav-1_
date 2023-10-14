@@ -6,9 +6,14 @@ editor:
     wrap: 100
 ---
 
-Dette er en studie gjennomført i emnet IDR4000, som en del av masterprogrammet i treningsfysiologi. Hensikten med denne oppgaven/studien er å anslå hvor pålitlig testen er ut ifra målinger som er samlet inn i fysiologilaben. I tillegg får vi øvd på våre feridgheter i å gjennomføre laboratorietester. Et annet mål med oppgaven er å bruke programvaren R som et verktøy for reproduserbar datavitenskap. 
+Dette er en studie gjennomført i emnet IDR4000, som en del av masterprogrammet i treningsfysiologi.
+Hensikten med denne oppgaven/studien er å anslå hvor pålitelig testen er ut ifra målinger som er
+samlet inn i fysiologilabben. I tillegg får vi øvd på våre ferdigheter i å gjennomføre
+laboratorietester. Et annet mål med oppgaven er å bruke programvaren R som et verktøy for
+reproduserbar datavitenskap.
 
-Vi skulle rekruttere åtte personer til å gjennomføre en styrketest i form av måling av kraftutvikling, samt noen uthholdenhetstester på sykkel. Testene skal gjennomføre to ganger, på to seperate dager.
+Vi rekrutterte åtte personer til å gjennomføre en styrketest, samt noen utholdenhetstester på
+sykkel. Testene ble gjennomført to ganger, på to separate dager.
 
 ## Metode
 
@@ -17,7 +22,15 @@ Vi skulle rekruttere åtte personer til å gjennomføre en styrketest i form av 
 Syv mannlige deltaker ble rekruttert til prosjektet (alder = 25,7 år +/- 7, vekt = 75, 7 kg +/- 10,8
 kg, høyde = 181,3 cm +/- 6,7 cm). Alle deltakerne trener regelmessig, men erfaring med trening på
 sykkel varierte innad i gruppa. Det var ingen av deltakerne som hadde noe særlig erfaring med
-sykkeltestene vi gjennomførte. 
+sykkeltestene vi gjennomførte.
+
+```{r} 
+#| echo: false
+
+library(readxl) 
+reablitet2 <- read_excel("data/reablitet2.xls") 
+
+```
 
 ### Studiedesign
 
@@ -25,20 +38,34 @@ Prosjektets testdager bestod av fire dager. Halvparten av gruppa ble testet hver
 deltakerne hadde én rolig dag mellom sine egne tester. Testdag 1 og 2 ble gjennomført som t1, mens
 testdag 3 og 4 ble gjennomført som t2. På hviledagen fikk alle deltakerne beskjed om at de kunne
 trene hva de selv ønsket av rolig trening. Dette for å sikre at de var tilnærmet likt restituert før
-hver test, slik at ikke treningen dagen før skulle påvirke resultatet på testen. For alle deltakerne ble det forsøkt å gjøre testdagene så identiske som mulig i form av at forsøkspersonene fikk samme testleder på hver test, likt tidspunkt på døgnet, beskjed om likt måltid og tidspunkt før test. 
+hver test, slik at ikke treningen dagen før skulle påvirke resultatet på testen. For alle deltakerne
+ble det forsøkt å gjøre testdagene så identiske som mulig i form av at forsøkspersonene fikk samme
+testleder på hver test (ett unntak pga. logistiske utfordringer for testleder), likt tidspunkt på døgnet, beskjed om likt måltid og tidspunkt før test. 
 
 ### Kalibrering - klargjøring til test
 
-Før hver forsøksperson skulle starte sykkeltesten sin kalibrerte vi O2-maskinen og Lode Excaibur-sykkelen. Vi sjekket at "Ambient Condition", luftfuktigheten og temperaturen, i rommet stemte overens med maskinens oppfatning. Videre gjennomførte vi "Volum Calibration", og sørget for at verdiene for O2 og CO2 var godkjent (+/- 1% i forskjell, og mellom 99.0 og 101.0). "Gas calibration" startet da gassflaska åpnes, og var ferdig når verdiene for O2 og CO2 lå på en verdi mellom -1.0 og 1.0, med en feilmargin på maksimalt 1.0. 
-Hvis det var noe som ikke stemte, eller vi ikke fikk gode nok målinger gjorde vi den aktuelle kalibreringen på nytt. Den siste klargjøring av maskinen var å gjøre klart VO2-opptak i "Mixing Chamber". Vi kontrollerte at det stod "small mouthpiece" og "30 sek delta time" i vinduet, og klargjorde til opptak.  
+Før hver forsøksperson skulle starte sykkeltesten kalibrerte vi oxycon pro og Lode
+Excalibur-sykkelen. Vi sjekket at luftfuktigheten og temperaturen i rommet
+stemte overens med oxycon sin estimering. Videre gjennomførte vi volumkalibrering, og sørget for
+at verdiene for O2 og CO2 var godkjent (+/- 1 % i forskjell, og mellom 99.0 og 101.0). "Gas
+calibration" startet da gassflaska åpnes, og var ferdig når verdiene for O2 og CO2 lå på en verdi
+mellom -1.0 og 1.0, med en feilmargin på maksimalt 1.0. Hvis det var noe som ikke stemte, eller vi
+ikke fikk gode nok målinger gjorde vi den aktuelle kalibreringen på nytt. Den siste klargjøring av
+maskinen var å gjøre klart VO2-opptak i "Mixing Chamber". Vi kontrollerte at det stod "small
+mouthpiece" og "30 sek delta time" i vinduet, og klargjorde til opptak.
 
-Videre var det å klargjøre sykkelen ved å stille inn riktig sittestilling. Ved t1 ble dette gjort sammen med forsøksperson, mens ved t2 hadde vi lagret det gamle sittestillingen og kopierte denne. Riktig setehøyde og -lengde og styrehøyde og -lengde, samt riktig pedaltype og krankarm ble stilt inn. 
+Videre var det å klargjøre sykkelen ved å stille inn riktig sittestilling. Ved t1 ble dette gjort
+sammen med forsøksperson, mens ved t2 hadde vi lagret det gamle sittestillingen og kopierte denne.
+Riktig setehøyde og -lengde og styrehøyde og -lengde, samt riktig pedaltype og krankarm ble stilt
+inn.
 
-De siste forberedelsene var å klargjøre munnstykket, slange og neseklype med teip. I tillegg til å legge inn forsøkspersonen i datamaskinen med aktuell informasjon. 
+De siste forberedelsene var å klargjøre munnstykket, slange og neseklype med teip. I tillegg til å
+legge inn forsøkspersonen i datamaskinen med aktuell informasjon.
 
 ### Testprosedyre
 
-Deltakerne starten med en syv minutters lang oppvarming på ergometer sykkel, med en gradvis økning i intensitet i form av opplevd anstrengelse (Borg). De syklet 3 min på 11-, 2 min på 13- og 2 min på
+Deltakerne starten med en syv minutters lang oppvarming på ergometer sykkel, med en gradvis økning i
+intensitet i form av opplevd anstrengelse (Borg). De syklet 3 min på 11-, 2 min på 13- og 2 min på
 15/16- i Borg.
 
 Del 1 styrketest: Etter oppvarming gjennomførte deltakerne en kort styrketest, i form av knebøy
@@ -47,43 +74,78 @@ kroppsvekt. Målet var å gjennomføre løftet så huritig som mulig, og kraftut
 muselab. Beste forsøk på hver belastning ble tellende.
 
 Del 2 sykkeltester: Deltakerne gikk direkte fra styrketesten til sykkeltestene. Her gjennomførte de
-en tredelt test, som først bestod av to submaksimale drag, deretter en VO2max-test og til slutt en Maximal Accumulated Oxygen Deficit (MAOD)-test. Testene ble gjennomført på Lode Excaibur.
+en tredelt test, som først bestod av to submaksimale drag, deretter en VO2max-test og til slutt en
+Maximal Accumulated Oxygen Deficit (MAOD)-test. Testene ble gjennomført på Lode Excaibur.
 
-Under hele sykkeltesten prøvde vi å kjøre mest mulig lik tilbakemelding og engasjement hver gang. Det var lite tilbakemeldinger under de submaksimale dragene, og mye engasjement og kun nødvendig informasjon under VO2maks-testen, spesielt mot slutten. Vi ga ingen opplysninger om VO2 underveis, men de fikk vite wattbelastning, i tillegg til at de hele tiden kunne se tråkkfrekvensen under alle testene. Vi fikk O2-målinger hvert 30.sek som vi noterte ned (både på VO2maks-testen og MAOD-testen), i tillegg til at vi noterte ned watt, tråkkfrekvens, puls og lengden på de to siste testene i minutter og sekunder. 
+Under hele sykkeltesten prøvde vi å kjøre mest mulig lik tilbakemelding og engasjement hver gang.
+Det var lite tilbakemeldinger under de submaksimale dragene, og mye engasjement og kun nødvendig
+informasjon under VO2maks-testen, spesielt mot slutten. Vi ga ingen opplysninger om VO2 underveis,
+men de fikk vite wattbelastning, i tillegg til at de hele tiden kunne se tråkkfrekvensen under alle
+testene. Vi fikk O2-målinger hvert 30.sek som vi noterte ned (både på VO2maks-testen og
+MAOD-testen), i tillegg til at vi noterte ned watt, tråkkfrekvens, puls og lengden på de to siste
+testene i minutter og sekunder.
 
 #### Submaksimale drag
 
-Den submaksimale testen bestod av to drag på fire minutter. For seks av deltakerne ble
-første belastning på testen gjennomført på 100 W og andre belastning på 150 W, mens én deltaker
-syklet på 75 W og 125 W. Tilpasningene ble gjort for å få en mer optimal test. Forsøkspersonene
-syklet med neseklype og munnstykket i de siste to minuttene av hvert drag (begynte å ta i da det hadde gått 1,5
-min). Deltakerne skulle holde en tråkkfrekvens på mellom 90 - 100 rpm. Hver belastning ble gjennomført på samme måte, og gikk direkte over i hverandre. Vi spurte om Borgs-skala etter hvert drag. Etter dragene var det to
-minutter pause der deltakerne satt helt i ro.
+Den submaksimale testen bestod av to drag på fire minutter. For seks av deltakerne ble første
+belastning på testen gjennomført på 100 W og andre belastning på 150 W, mens én deltaker syklet på
+75 W og 125 W. Tilpasningene ble gjort for å få en mer optimal test. Forsøkspersonene syklet med
+neseklype og munnstykket i de siste to minuttene av hvert drag (begynte å ta i da det hadde gått 1,5
+min). Deltakerne skulle holde en tråkkfrekvens på mellom 90 - 100 rpm. Hver belastning ble
+gjennomført på samme måte, og gikk direkte over i hverandre. Vi spurte om Borgs-skala etter hvert
+drag. Etter dragene var det to minutter pause der deltakerne satt helt i ro.
 
 #### VO2-maks-test
 
-VO2maks-testen startet for de fleste på 200 W, og økte med 25 W hvert minutt helt til utmattelse. For deltakeren som hadde litt lavere W på de submaksimale dragene startet VO2maks-testen på 150 W. Testen var ferdig
-da tråkkfrekvens var < 60. Det var fri tråkkfrekvens under hele testen, men den skulle være lik ved t2. Neseklype og munnstykket var i under hele testen. Vi spurte om Borgs-skala rett etter VO2maks-testen. Etter avsluttet test fikk forsøkspersonen fem minutter pause. Det første
-minuttet etter avsluttet test satt personen helt i ro, mens de neste fire minuttene ble gjennomført som rolig sykling
-på 50 W. Valgfri tråkkfrekvens, men den skulle være lik ved t2. Vi fikk måling hvert 30.sek. 
+VO2maks-testen startet for de fleste på 200 W, og økte med 25 W hvert minutt helt til utmattelse.
+For deltakeren som hadde litt lavere W på de submaksimale dragene startet VO2maks-testen på 150 W.
+Testen var ferdig da tråkkfrekvens var \< 60. Det var fri tråkkfrekvens under hele testen, men den
+skulle være lik ved t2. Neseklype og munnstykket var i under hele testen. Vi spurte om Borgs-skala
+rett etter VO2maks-testen. Etter avsluttet test fikk forsøkspersonen fem minutter pause. Det første
+minuttet etter avsluttet test satt personen helt i ro, mens de neste fire minuttene ble gjennomført
+som rolig sykling på 50 W. Valgfri tråkkfrekvens, men den skulle være lik ved t2. Vi fikk måling
+hvert 30.sek.
 
 #### MAOD-test
 
-MAOD-testens startwatt baserte seg på VO2maks-testen. Startwatt på MAOD-testen var den siste belastningen deltakeren syklet 30.sek eller mer på under VO2maks-testen. Den belastningen som ble brukt under t1 ble også brukt på t2 uavhengig av hvordan det gikk på t2 VO2maks-test. Deltakerne syklet med neseklype og munnstykket under hele testen. Deltakerbe startet med flying start fra 50 W. Belastningen ble satt klart på maskinen, slik at den var klar når testleder ga beskjed om at testen skulle starte. Deltakerne syklet så lenge som mulig, og testen var over når tråkkfrekvensen var < 60. Vi spurte om Borgs-skala rett etter avsluttet test.     
+MAOD-testens startwatt baserte seg på VO2maks-testen. Startwatt på MAOD-testen var den siste
+belastningen deltakeren syklet 30.sek eller mer på under VO2maks-testen. Den belastningen som ble
+brukt under t1 ble også brukt på t2 uavhengig av hvordan det gikk på t2 VO2maks-test. Deltakerne
+syklet med neseklype og munnstykket under hele testen. Deltakerbe startet med flying start fra 50 W.
+Belastningen ble satt klart på maskinen, slik at den var klar når testleder ga beskjed om at testen
+skulle starte. Deltakerne syklet så lenge som mulig, og testen var over når tråkkfrekvensen var \<
+60. Vi spurte om Borgs-skala rett etter avsluttet test.
 
 ### Tiltak for å sikre god reliabilitet
 
-For å sikre en god reliabilitet på de fysiologiske testene gjorde vi flere tiltak for å redusere risikoen for forstyrrende variabler som kan påvirke resultatmålene. For det første ble begge testene kjørt på nøyaktig samme måte, med en standardisert protokoll. Testene for hver forsøksperson ble avholdt på omtrent samme tidspunkt (+/- 2 timer). Vi ga også beskjed om at de bare kunne trene rolig dagen før t1, og dagen i mellom testene. På den måten sikret vi at ingen var treningspåvirket og forhåpentligvis likt restituert før hver test. Deltakerne fikk også beskjed om at siste måltid før begge testene skulle være like, og til omtrent samme tidspunkt.
+For å sikre en god reliabilitet på de fysiologiske testene gjorde vi flere tiltak for å redusere
+risikoen for forstyrrende variabler som kan påvirke resultatmålene. For det første ble begge testene
+kjørt på nøyaktig samme måte, med en standardisert protokoll. Testene for hver forsøksperson ble
+avholdt på omtrent samme tidspunkt (+/- 2 timer). Vi ga også beskjed om at de bare kunne trene rolig
+dagen før t1, og dagen i mellom testene. På den måten sikret vi at ingen var treningspåvirket og
+forhåpentligvis likt restituert før hver test. Deltakerne fikk også beskjed om at siste måltid før
+begge testene skulle være like, og til omtrent samme tidspunkt.
 
-Vi kjørte også samme tråkkfrekvensen ved første submaksimale belastningstrinn og ved MAOD-resten, og dette ble kopiert ved t2. Det var lik belastning og lengde på pause før hver MAOD-test begge dager uansett utfall på VO2maks-testen. I tillegg ble hele sykkeltesten gjennomført sittende.  
+Vi kjørte også samme tråkkfrekvensen ved første submaksimale belastningstrinn og ved MAOD-resten, og
+dette ble kopiert ved t2. Det var lik belastning og lengde på pause før hver MAOD-test begge dager
+uansett utfall på VO2maks-testen. I tillegg ble hele sykkeltesten gjennomført sittende.
 
-Vi valgte også å ha samme testleder for hver enkelt forsøksperson ved både t1 og t2. Den muntlige oppmuntringen og tilbakemeldingene underveis på testene var lik, og vi sørget for å gi like instruksjoner om utførelsen av testene og målet med hver test.  
+Vi valgte også å ha samme testleder for hver enkelt forsøksperson ved både t1 og t2. Den muntlige
+oppmuntringen og tilbakemeldingene underveis på testene var lik, og vi sørget for å gi like
+instruksjoner om utførelsen av testene og målet med hver test.
 
-Det ble også kjørt kalibrering av maskinene før hver test, og vi satte godkjent kalibrering på volum til 1%, og godkjent kalibrering av gas med en feilmargin på maksimalt 1.0.  
-
+Det ble også kjørt kalibrering av maskinene før hver test, og vi satte godkjent kalibrering på volum
+til 1%, og godkjent kalibrering av gas med en feilmargin på maksimalt 1.0.
 
 ### Datainnsamling og -behandling
 
-Etter å ha gjennomført testene samlet vi inn dataen vi skulle bruke for å gjøre statistiske analyser. Vi noterte ned VO2 på de submaksimale dragene, og regnet ut VO2.rel.max og VO2.max på VO2maks-testen. Samtidig noterte vi ned andre verdifulle variabler etter test, slik som hr.max, W.max, rer.max, bf.max, V'E.max, hvor lenge personen syklet, og hvilken watt personen avsluttet på, samt opplevd anstrengelse (Borg). 
+Etter å ha gjennomført testene samlet vi inn dataen vi skulle bruke for å gjøre statistiske
+analyser. Vi noterte ned VO2 på de submaksimale dragene, og regnet ut VO2.rel.max og VO2.max på
+VO2maks-testen. Samtidig noterte vi ned andre verdifulle variabler etter test, slik som hr.max,
+W.max, rer.max, bf.max, V'E.max, hvor lenge personen syklet, og hvilken watt personen avsluttet på,
+samt opplevd anstrengelse (Borg).
 
-Etter MAOD-testen regnet vi ut VO2.max, oksygenkravet ved belastning under MAOD-test (L/min), det totale okysgenkravet som måtte dekkes (L), akkumulert oksygenopptak på testene (L), akkumulert oksygengjeld og prosent av arbeidet som ble dekt anaerobt (%). Samtidig noterte vi ned hvor lenge personen syklet (i sek), hr.max og opplevd anstrengelse (Borg). 
+Etter MAOD-testen regnet vi ut VO2.max, oksygenkravet ved belastning under MAOD-test (L/min), det
+totale okysgenkravet som måtte dekkes (L), akkumulert oksygenopptak på testene (L), akkumulert
+oksygengjeld og prosent av arbeidet som ble dekt anaerobt (%). Samtidig noterte vi ned hvor lenge
+personen syklet (i sek), hr.max og opplevd anstrengelse (Borg).
