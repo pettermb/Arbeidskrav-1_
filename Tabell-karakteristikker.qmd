@@ -114,7 +114,8 @@ ve.max <- data.frame(trial1 = c(217.0, 209.5, 217.0, 184.5, 197.5, 206.5, 179.0)
 
 ve.max %>%
   mutate(diff = trial2 - trial1) %>% # Change/difference score
-  summarise(s = sd(diff),  # Summarize to calculate sd, and... 
+  summarise(s = sd(diff),  # Summarize to calculate sd, and..
+            mean_diff = mean(diff),
             m = mean(c(trial1, trial2)), # mean
             te = round(s / sqrt(2), 1), # the typical error.
             cv = round(100 * (te / m), 1), # Calculate as a percentage of the mean
@@ -233,7 +234,8 @@ ggplot(data = reablitet2, aes(x = w.max,
 ggplot(data = reablitet2, aes(x = w.max, 
                               y = vo2.rel.max, 
                               color = timepoint)) + 
-  geom_point() +
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE, formula = y~x) +
   facet_wrap(~ timepoint) 
 ```
 

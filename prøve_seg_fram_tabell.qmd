@@ -1,7 +1,12 @@
 ---
 title: "Untitled"
-format: pdf
+format: pdf 
+output:
+  pdf_document:
+    latex_engine: xelatex
 editor: visual
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r}
@@ -14,6 +19,9 @@ invisible(Sys.setlocale(category = "LC_ALL", locale = "en_US.UTF-8"))
 ```
 
 ```{r}
+#| echo: false 
+#| output: true 
+
 reablitet2 |> 
   filter(timepoint == "t1") |> 
   select(timepoint, age:bodymass, vo2.rel.max, w.max) |> 
@@ -29,8 +37,8 @@ reablitet2 |>
                            labels = c("Alder (år)", 
                                       "Høyde (cm)", 
                                       "Vekt (kg)", 
-                                      "VO$_{2\\text{maks}}$ (ml·min$^{-1}$·kg$^{-1}$)", 
-                                      "W$_\\text{maks}$")))  |> 
+                                      "$\\text{VO}_2\\text{maks}$", 
+                                      "Wmaks")))  |> 
   
   summarise(m = mean(verdier), 
             s = sd(verdier), 
@@ -38,4 +46,40 @@ reablitet2 |>
   gt() |> 
   fmt_number(decimals = 2) 
   
+```
+
+```{r}
+#| echo: false 
+#| 
+reablitet2 |> 
+  filter(timepoint == "t1") |> 
+  select(timepoint, age:bodymass, vo2.rel.max, w.max) |> 
+  pivot_longer(cols = !timepoint,
+               names_to = "variabler", 
+               values_to = "verdier") |> 
+  mutate(variabel = factor(variabler, 
+                           levels = c("age", 
+                                      "bodyheight", 
+                                      "bodymass", 
+                                      "vo2.rel.max", 
+                                      "w.max"), 
+                           labels = c("Alder (år)", 
+                                      "Høyde (cm)", 
+                                      "Vekt (kg)", 
+                                      "VO2maks", 
+                                      "Wmaks")))  |> 
+  
+  summarise(m = mean(verdier), 
+            s = sd(verdier), 
+            .by = variabel) |> 
+  gt() |> 
+  fmt_number(decimals = 2) |> 
+  cols_merge(columns = c(m, s), 
+             pattern = "{1} &plusmn; {2}") |> 
+  cols_label(m ="") |> 
+  tab_footnote(footnote = md("*Dataene er presentert som gjennomsnitt &plusmn; 
+                             standardavvik.*")) |> 
+  cols_width(columns = everything() ~ px(120)) |> 
+  tab_header("Karakteristikker av forsøkspersonene basert på første test") |> 
+  as_latex() 
 ```

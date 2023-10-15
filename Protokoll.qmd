@@ -199,4 +199,19 @@ personen syklet (i sekunder), makspuls og opplevd anstrengelse (Borg).
 
 For relativ VO$_{2maks}$ var differansen mellom testene 0.62 &plusmn; 2.41 $ml·kg^{-1}·min^{-1}$. Med en typisk målefeil på 1.7. I prosentvis forskjell mellom testene var det 0.94 &plusmn; 3.65 % for denne variabelen. 
 
+For W$_{maks}$ og ventilasjonen er differansen mellom testene henholdsvis 5.71 &plusmn; 13.80 W og 2.21 &plusmn; 11.42 l/min. Den typiske målefeilen var hhv. 9.8 og 8.1, mens cv var 2.4 og 4. 
+
+Figuren under viser at det er en korrelasjon mellom effekten de har på siste minuttet av makstesten og relativ VO$_{2maks}$ ved begge testene, som er å forvente. 
+```{r} 
+#| echo: false 
+#| warning: false 
+
+ggplot(data = reablitet2, aes(x = w.max, 
+                              y = vo2.rel.max, 
+                              color = timepoint)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE, formula = y~x) +
+  facet_wrap(~ timepoint) 
+```
+
 
