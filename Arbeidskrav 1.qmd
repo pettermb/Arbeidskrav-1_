@@ -162,8 +162,6 @@ skulle starte. Deltakerne syklet så lenge som mulig, og testen var over når tr
 
 ### Tiltak for å sikre god reliabilitet
 
-For å opprettholde en størst mulig grad av validitet og reliabilitet er det nødevndig å ta stilling til ytre variabler som kan påvirke resultatet. Ved å ta hensyn til potensielle forstyrrende variabler reduseres risikoen for feilmålinger, og gjør funnene mer pålitelige. 
-
 For å sikre en god reliabilitet på de fysiologiske testene gjorde vi flere tiltak for å redusere
 risikoen for forstyrrende variabler som kan påvirke resultatene. For det første ble begge testene
 kjørt på så nøyaktig lik måte som mulig, med en standardisert protokoll. Testene for hver forsøksperson ble
@@ -215,25 +213,4 @@ ggplot(data = reablitet2, aes(x = w.max,
   geom_smooth(method = "lm", se = FALSE, formula = y~x) +
   facet_wrap(~ timepoint) 
 ```
-
----
-title: "Referanser"
-author: "Karoline Simpson-Larsen"
-date: "2023-15-10"
-output:
-        pdf_document:
-                  reference_docx: reference.docx
-bibliography:  
-___
-
-@Article{RefID1,
-Author= {srael Halperin, David B. Pyne, and David T. Martin},
-Title= {Threats to Internal Validity in Exercise Science: A Review of Overlooked Confounding Variables},
-Journal= {International Journal of Sports Physiology and Performance},
-Year= {2015}, 
-Volume= {10},
-Number= {7},
-Pages= {823-829}}
-
-
 
