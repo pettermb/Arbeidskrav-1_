@@ -1,0 +1,41 @@
+---
+title: "Untitled"
+format: pdf
+editor: visual
+---
+
+```{r}
+library(tidyverse) 
+library(gt) 
+
+library(readxl) 
+reablitet2 <- read_excel("data/reablitet2.xls") 
+invisible(Sys.setlocale(category = "LC_ALL", locale = "en_US.UTF-8"))
+```
+
+```{r}
+reablitet2 |> 
+  filter(timepoint == "t1") |> 
+  select(timepoint, age:bodymass, vo2.rel.max, w.max) |> 
+  pivot_longer(cols = !timepoint,
+               names_to = "variabler", 
+               values_to = "verdier") |> 
+  mutate(variabel = factor(variabler, 
+                           levels = c("age", 
+                                      "bodyheight", 
+                                      "bodymass", 
+                                      "vo2.rel.max", 
+                                      "w.max"), 
+                           labels = c("Alder (år)", 
+                                      "Høyde (cm)", 
+                                      "Vekt (kg)", 
+                                      "VO$_{2\\text{maks}}$ (ml·min$^{-1}$·kg$^{-1}$)", 
+                                      "W$_\\text{maks}$")))  |> 
+  
+  summarise(m = mean(verdier), 
+            s = sd(verdier), 
+            .by = variabel) |> 
+  gt() |> 
+  fmt_number(decimals = 2) 
+  
+```
