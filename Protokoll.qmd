@@ -8,6 +8,8 @@ header-includes:
   - \usepackage{fontspec}
   - \setmainfont{Times New Roman} 
   - \renewcommand{\normalsize}{\fontsize{12}{18}\selectfont} 
+editor_options: 
+  chunk_output_type: console
 ---
 
 Dette er en studie gjennomført i emnet IDR4000, som en del av masterprogrammet i treningsfysiologi.
@@ -30,6 +32,7 @@ sykkeltestene vi gjennomførte.
 
 ```{r} 
 #| echo: false 
+#| warning: false
 
 library(readxl) 
 reablitet2 <- read_excel("data/reablitet2.xls") 
@@ -49,6 +52,9 @@ library(gt)
 
 ```{r} 
 #| echo: false 
+#| message: false 
+#| warning: false
+#| output: true 
 
 reablitet2 %>%
   select (timepoint, hr.max, w.max, vo2.rel.max, rer.max, ve.max, bf.max)%>%
@@ -58,16 +64,17 @@ reablitet2 %>%
           RER = mean(rer.max) ,
           VE = mean(ve.max) ,
           BF = mean(bf.max)) %>%
-  gt(caption = md("VO<sub>2max Test"))%>%
+  gt(caption = md("VO<sub>2maks</sub>-test"))%>%
   fmt_number(columns = w.max:BF,
              decimals = 1)%>%
   cols_label(timepoint = "Tidspunkt",
-               w.max = md("W<sub>max</sub><br><small>"),
-               VO2maks = md("VO<sub>2max</sub><br><small>(ml/kg/min<sup>-1</sup>)"),
+               w.max = md("W<sub>maks</sub><br><small>"),
+               VO2maks = md("VO<sub>2maks</sub><br><small>
+                            (ml·kg<sup>-1</sup>·min<sup>-1</sup>)"),
                RER = md("RER"),
-               VE = md("VE<sub></sub><br><small>(l/min<sup>-1</sup>)"),
+               VE = md("VE<sub></sub><br><small>(l·min<sup>-1</sup>)"),
                BF = md("BF"))%>%
-    tab_header(title = "Gjennomsnitt for t1 og t2")
+    tab_header(title = "Gjennomsnitt for t1 og t2") 
 ```
 
 
@@ -120,7 +127,7 @@ Under hele sykkeltesten prøvde vi å kjøre mest mulig lik tilbakemelding og en
 Det var lite tilbakemeldinger under de submaksimale dragene, og mye engasjement og kun nødvendig
 informasjon under VO$_{2maks}$-testen, spesielt mot slutten. Vi ga ingen opplysninger om oksygenopptak (VO2) underveis,
 men de fikk vite wattbelastning. I tillegg til at de hele tiden kunne se tråkkfrekvensen under alle
-testene. Vi fikk O$_2$-målinger hvert 30.sek som vi noterte ned (både på VO2maks-testen og
+testene. Vi fikk O$_2$-målinger hvert 30.sek som vi noterte ned (både på VO$_{2maks}$-testen og
 MAOD-testen), i tillegg til at vi noterte ned watt, tråkkfrekvens, puls og lengden på de to siste
 testene.
 
@@ -165,7 +172,7 @@ begge testene skulle være like, og til omtrent samme tidspunkt.
 
 Vi kjørte også samme tråkkfrekvensen ved første submaksimale belastningstrinn og ved MAOD-testen, og
 dette ble kopiert ved t2. Det var lik belastning og lengde på pause før hver MAOD-test begge dager
-uansett utfall på VO2maks-testen. I tillegg ble hele sykkeltesten gjennomført sittende.
+uansett utfall på VO$_{2maks}$-testen. I tillegg ble hele sykkeltesten gjennomført sittende.
 
 Vi valgte også å ha samme testleder for hver enkelt forsøksperson ved både t1 og t2. Den muntlige
 oppmuntringen og tilbakemeldingene underveis på testene var lik, og vi sørget for å gi like
@@ -186,3 +193,10 @@ Etter MAOD-testen regnet vi ut VO2.max, oksygenkravet ved belastning under MAOD-
 totale okysgenkravet som måtte dekkes (L), akkumulert oksygenopptak på testene (L), akkumulert
 oksygengjeld og prosent av arbeidet som ble dekket anaerobt (%). Samtidig noterte vi ned hvor lenge
 personen syklet (i sekunder), makspuls og opplevd anstrengelse (Borg). 
+
+
+### Resultater 
+
+For relativ VO$_{2maks}$ var differansen mellom testene 0.62 &plusmn; 2.41 $ml·kg^{-1}·min^{-1}$. Med en typisk målefeil på 1.7. I prosentvis forskjell mellom testene var det 0.94 &plusmn; 3.65 % for denne variabelen. 
+
+
