@@ -1,6 +1,6 @@
 ---
-title: "Arbeidskrav 1 - reliabilitet og reproduserbar dataanalyse" 
-format: pdf 
+title: "Arbeidskrav 1 reliabilitet og reproduserbar dataanalyse" 
+format: pdf
 editor: 
   markdown: 
     wrap: 100 
@@ -11,7 +11,6 @@ header-includes:
 editor_options: 
   chunk_output_type: console
 ---
-
 Dette er en studie gjennomført i emnet IDR4000, som en del av masterprogrammet i treningsfysiologi.
 Hensikten med denne oppgaven/studien er å anslå hvor pålitelig testen er ut ifra målinger som er
 samlet inn i fysiologilabben. I tillegg får vi øvd på våre ferdigheter i å gjennomføre
@@ -147,7 +146,7 @@ legge inn forsøkspersonen i datamaskinen med aktuell informasjon.
 
 Deltakerne startet med en syv minutters lang oppvarming på ergometer sykkel, med en gradvis økning i
 intensitet. Intensiteten ble styrt etter Borgs 6-20 skala. De syklet 3 min tilsvarende opplevd anstrengelse på 11, 2 min på 13 og 2 min på
-15/16 på Borgs 6-20 skala.
+15/16 på Borgs 6-20 skala. KILDE: "Halperin.et.al.,2015"
 
 Del 1 styrketest: Etter oppvarming gjennomførte deltakerne en kort styrketest, i form av knebøy
 power test. Den bestod av tre løft med 20 kg, tre løft med henholdsvis 30-, 60- og 75 % av egen
@@ -196,6 +195,8 @@ skulle starte. Deltakerne syklet så lenge som mulig, og testen var over når tr
 60. Vi spurte om Borgs-skala rett etter avsluttet test.
 
 ### Tiltak for å sikre god reliabilitet
+
+For å opprettholde en størst mulig grad av validitet og reliabilitet er det nødevndig å ta stilling til ytre variabler som kan påvirke resultatet. Ved å ta hensyn til potensielle forstyrrende variabler reduseres risikoen for feilmålinger, og gjør funnene mer pålitelige. KILDE(!!) 
 
 For å sikre en god reliabilitet på de fysiologiske testene gjorde vi flere tiltak for å redusere
 risikoen for forstyrrende variabler som kan påvirke resultatene. For det første ble begge testene
@@ -248,5 +249,4 @@ ggplot(data = reablitet2, aes(x = w.max,
   geom_smooth(method = "lm", se = FALSE, formula = y~x) +
   facet_wrap(~ timepoint) 
 ```
-
 
