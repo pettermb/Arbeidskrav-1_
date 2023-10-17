@@ -14,6 +14,7 @@ execute:
   echo: false 
   warning: false 
   message: false 
+bibliography: references/Literaturliste.bib
 --- 
 
 
@@ -97,7 +98,7 @@ testdag 3 og 4 ble gjennomført som t2. På hviledagen fikk alle deltakerne besk
 trene det de selv ønsket av rolig trening. Dette for å sikre at de var tilnærmet likt restituert før
 hver test. For alle deltakerne
 ble det forsøkt å gjøre testdagene så identiske som mulig i form av at forsøkspersonene fikk samme
-testleder på hver test (ett unntak pga. logistiske utfordringer for testleder), likt tidspunkt på døgnet &plusmn; 2 timer, beskjed om likt måltid og til samme tid før test. 
+testleder på hver test (ett unntak pga. logistiske utfordringer for testleder), likt tidspunkt på døgnet &plusmn; 2 timer, beskjed om likt måltid og til samme tid før test. [@hopkins2000]
 
 ### Kalibrering - klargjøring til test
 
@@ -123,7 +124,7 @@ legge inn forsøkspersonen i datamaskinen med aktuell informasjon.
 
 Deltakerne startet med en syv minutters lang oppvarming på ergometer sykkel, med en gradvis økning i
 intensitet. Intensiteten ble styrt etter Borgs 6-20 skala. De syklet 3 min tilsvarende opplevd anstrengelse på 11, 2 min på 13 og 2 min på
-15/16 på Borgs 6-20 skala. KILDE: "Halperin.et.al.,2015"
+15/16 på Borgs 6-20 skala [@hopkins2000]. 
 
 Del 1 styrketest: Etter oppvarming gjennomførte deltakerne en kort styrketest, i form av knebøy
 power test. Den bestod av tre løft med 20 kg, tre løft med henholdsvis 30-, 60- og 75 % av egen
