@@ -1,10 +1,6 @@
 ---
 title: "Untitled"
-format: pdf 
-output:
-  pdf_document:
-    latex_engine: xelatex
-editor: visual
+format: pdf
 editor_options: 
   chunk_output_type: console
 ---
@@ -37,20 +33,23 @@ reablitet2 |>
                            labels = c("Alder (år)", 
                                       "Høyde (cm)", 
                                       "Vekt (kg)", 
-                                      "$\\text{VO}_2\\text{maks}$", 
-                                      "Wmaks")))  |> 
+                                      "VO2maks", 
+                                      "Wmaks"))) |> 
   
   summarise(m = mean(verdier), 
             s = sd(verdier), 
-            .by = variabel) |> 
+            .by = variabler) |> 
   gt() |> 
   fmt_number(decimals = 2) 
+
+
+ 
   
 ```
 
 ```{r}
 #| echo: false 
-#| 
+
 reablitet2 |> 
   filter(timepoint == "t1") |> 
   select(timepoint, age:bodymass, vo2.rel.max, w.max) |> 
@@ -71,15 +70,19 @@ reablitet2 |>
   
   summarise(m = mean(verdier), 
             s = sd(verdier), 
-            .by = variabel) |> 
+            .by = variabler) |> 
   gt() |> 
   fmt_number(decimals = 2) |> 
-  cols_merge(columns = c(m, s), 
-             pattern = "{1} &plusmn; {2}") |> 
-  cols_label(m ="") |> 
-  tab_footnote(footnote = md("*Dataene er presentert som gjennomsnitt &plusmn; 
-                             standardavvik.*")) |> 
+  
+cols_merge(columns = c(m, s), 
+           pattern = "{1} &plusmn; {2}") |> 
+  cols_label(variabler = "") |> 
+  cols_label(m = "") |> 
+  
+  tab_footnote(footnote = md("*Dataene er presentert som gjennomsnitt &plusmn; standardavvik.*")) |> 
+  
   cols_width(columns = everything() ~ px(120)) |> 
-  tab_header("Karakteristikker av forsøkspersonene basert på første test") |> 
-  as_latex() 
+  
+  tab_header("Karakteristikker av forsøkspersonene basert på første test") 
+
 ```
