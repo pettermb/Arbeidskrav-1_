@@ -52,6 +52,46 @@
   \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
@@ -78,6 +118,11 @@
 \def\fps@figure{htbp}
 \makeatother
 
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{longtable}
+\usepackage{colortbl}
+\usepackage{array}
 \KOMAoption{captions}{tableheading}
 \usepackage{fontspec}
 \setmainfont{Times New Roman}
@@ -156,7 +201,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, enhanced, interior hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, interior hidden, boxrule=0pt, sharp corners]}{\end{tcolorbox}}\fi
 
 Dette er en studie gjennomført i emnet IDR4000, som en del av
 masterprogrammet i treningsfysiologi. Hensikten med denne
@@ -181,6 +226,83 @@ Syv mannlige deltaker ble rekruttert til prosjektet (alder = 25,7 ± 7
 trener regelmessig, men erfaring med trening på sykkel varierte innad i
 gruppa. Det var ingen av deltakerne som hadde noe særlig erfaring med
 sykkeltestene vi gjennomførte.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{reablitet2 }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{filter}\NormalTok{(timepoint }\SpecialCharTok{==} \StringTok{"t1"}\NormalTok{) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{select}\NormalTok{(timepoint, age}\SpecialCharTok{:}\NormalTok{bodymass, vo2.rel.max, w.max) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{pivot\_longer}\NormalTok{(}\AttributeTok{cols =} \SpecialCharTok{!}\NormalTok{timepoint,}
+               \AttributeTok{names\_to =} \StringTok{"variabler"}\NormalTok{, }
+               \AttributeTok{values\_to =} \StringTok{"verdier"}\NormalTok{) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{variabel =} \FunctionTok{factor}\NormalTok{(variabler, }
+                           \AttributeTok{levels =} \FunctionTok{c}\NormalTok{(}\StringTok{"age"}\NormalTok{, }
+                                      \StringTok{"bodyheight"}\NormalTok{, }
+                                      \StringTok{"bodymass"}\NormalTok{, }
+                                      \StringTok{"vo2.rel.max"}\NormalTok{, }
+                                      \StringTok{"w.max"}\NormalTok{), }
+                           \AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{"Alder (år)"}\NormalTok{, }
+                                      \StringTok{"Høyde (cm)"}\NormalTok{, }
+                                      \StringTok{"Vekt (kg)"}\NormalTok{, }
+                                      \StringTok{"VO2maks"}\NormalTok{, }
+                                      \StringTok{"Wmaks"}\NormalTok{)))  }\SpecialCharTok{|\textgreater{}} 
+  
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{m =} \FunctionTok{mean}\NormalTok{(verdier), }
+            \AttributeTok{s =} \FunctionTok{sd}\NormalTok{(verdier), }
+            \AttributeTok{.by =}\NormalTok{ variabel) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{gt}\NormalTok{() }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{fmt\_number}\NormalTok{(}\AttributeTok{decimals =} \DecValTok{2}\NormalTok{) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{cols\_merge}\NormalTok{(}\AttributeTok{columns =} \FunctionTok{c}\NormalTok{(m, s), }
+             \AttributeTok{pattern =} \StringTok{"\{1\} \&plusmn; \{2\}"}\NormalTok{) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{cols\_label}\NormalTok{(}\AttributeTok{m =}\StringTok{""}\NormalTok{) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{tab\_footnote}\NormalTok{(}\AttributeTok{footnote =} \FunctionTok{md}\NormalTok{(}\StringTok{"*Dataene er presentert som gjennomsnitt \&plusmn; }
+\StringTok{                             standardavvik.*"}\NormalTok{)) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{cols\_width}\NormalTok{(}\AttributeTok{columns =} \FunctionTok{everything}\NormalTok{() }\SpecialCharTok{\textasciitilde{}} \FunctionTok{px}\NormalTok{(}\DecValTok{120}\NormalTok{)) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{tab\_header}\NormalTok{(}\StringTok{"Karakteristikker av forsøkspersonene basert på første test"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\setlength{\LTpost}{0mm}
+\begin{longtable*}{>{\centering\arraybackslash}p{120px}>{\raggedleft\arraybackslash}p{120px}}
+\caption*{
+{\large Karakteristikker av forsøkspersonene basert på første test}
+} \\ 
+\toprule
+variabel &  \\ 
+\midrule\addlinespace[2.5pt]
+Alder (år) & $25.71$ &plusmn; $3.55$ \\ 
+Høyde (cm) & $181.29$ &plusmn; $4.57$ \\ 
+Vekt (kg) & $75.66$ &plusmn; $7.37$ \\ 
+VO2maks & $66.23$ &plusmn; $7.23$ \\ 
+Wmaks & $410.00$ &plusmn; $58.95$ \\ 
+\bottomrule
+\end{longtable*}
+\begin{minipage}{\linewidth}
+\emph{Dataene er presentert som gjennomsnitt ±
+standardavvik.}\\
+\end{minipage}
+
+\begin{verbatim}
+Warning: HTML tags found, and they will be removed.
+* Set `options(gt.html_tag_check = FALSE)` to disable this check.
+HTML tags found, and they will be removed.
+* Set `options(gt.html_tag_check = FALSE)` to disable this check.
+HTML tags found, and they will be removed.
+* Set `options(gt.html_tag_check = FALSE)` to disable this check.
+\end{verbatim}
+
+\begin{longtable*}{lrrrrr}
+\caption*{
+{\large Gjennomsnitt for t1 og t2}
+} \\ 
+\toprule
+Tidspunkt & Wmaks & VO2maks
+(ml·kg-1·min-1) & RER & VE(l·min-1) & BF \\ 
+\midrule\addlinespace[2.5pt]
+t1 & $410.0$ & $66.2$ & $1.2$ & $201.6$ & $59.2$ \\ 
+t2 & $404.3$ & $65.6$ & $1.2$ & $199.4$ & $58.1$ \\ 
+\bottomrule
+\end{longtable*}
 
 \hypertarget{studiedesign}{%
 \subsubsection{Studiedesign}\label{studiedesign}}
@@ -252,8 +374,8 @@ under VO\(_{2maks}\)-testen, spesielt mot slutten. Vi ga ingen
 opplysninger om oksygenopptak (VO2) underveis, men de fikk vite
 wattbelastning. I tillegg til at de hele tiden kunne se tråkkfrekvensen
 under alle testene. Vi fikk O\(_2\)-målinger hvert 30.sek som vi noterte
-ned (både på VO2maks-testen og MAOD-testen), i tillegg til at vi noterte
-ned watt, tråkkfrekvens, puls og lengden på de to siste testene.
+ned (både på VO\(_{2maks}\)-testen og MAOD-testen), i tillegg til at vi
+noterte ned watt, tråkkfrekvens, puls og lengden på de to siste testene.
 
 \hypertarget{submaksimale-drag}{%
 \paragraph{Submaksimale drag}\label{submaksimale-drag}}
@@ -317,7 +439,7 @@ være like, og til omtrent samme tidspunkt.
 Vi kjørte også samme tråkkfrekvensen ved første submaksimale
 belastningstrinn og ved MAOD-testen, og dette ble kopiert ved t2. Det
 var lik belastning og lengde på pause før hver MAOD-test begge dager
-uansett utfall på VO2maks-testen. I tillegg ble hele sykkeltesten
+uansett utfall på VO\(_{2maks}\)-testen. I tillegg ble hele sykkeltesten
 gjennomført sittende.
 
 Vi valgte også å ha samme testleder for hver enkelt forsøksperson ved
@@ -346,6 +468,23 @@ akkumulert oksygenopptak på testene (L), akkumulert oksygengjeld og
 prosent av arbeidet som ble dekket anaerobt (\%). Samtidig noterte vi
 ned hvor lenge personen syklet (i sekunder), makspuls og opplevd
 anstrengelse (Borg).
+
+\hypertarget{resultater}{%
+\subsubsection{Resultater}\label{resultater}}
+
+For relativ VO\(_{2maks}\) var differansen mellom testene 0.62 ± 2.41
+\(ml·kg^{-1}·min^{-1}\). Med en typisk målefeil på 1.7. I prosentvis
+forskjell mellom testene var det 0.94 ± 3.65 \% for denne variabelen.
+
+For W\(_{maks}\) og ventilasjonen er differansen mellom testene
+henholdsvis 5.71 ± 13.80 W og 2.21 ± 11.42 l/min. Den typiske målefeilen
+var hhv. 9.8 og 8.1, mens cv var 2.4 og 4.
+
+Figuren under viser at det er en korrelasjon mellom effekten de har på
+siste minuttet av makstesten og relativ VO\(_{2maks}\) ved begge
+testene, som er å forvente.
+
+\includegraphics{Protokoll_files/figure-pdf/unnamed-chunk-5-1.pdf}
 
 
 
