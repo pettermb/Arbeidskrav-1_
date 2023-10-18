@@ -5,7 +5,7 @@ title: "Tabell karakteristikker"
 format: html
 editor: visual
 editor_options: 
-  chunk_output_type: console
+  chunk_output_type: console 
 ---
 
 title: "Arbeidskrav 1"
