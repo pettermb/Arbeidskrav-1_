@@ -19,11 +19,14 @@ bibliography: references/Literaturliste.bib
 
 ## Introduksjon
 
-Hensikten med denne studien er å finne ut hvor pålitelig en VO$_{2maks}$-test på sykkel er. Faktorer
-som påvirker reproduserbarheten av testen gjelder dagsvariasjoner hos forsøkspersonene, men også
-variasjoner i måleinstrumentene og hvordan vi instruerer underveis kan påvirke. Derfor var
+Hensikten med denne studien er å finne ut hvor reproduserbar en VO$_{2maks}$-test på sykkel er. Dette er interessant fordi bedre reliabilitet betyr at vi kan stole enda mer på de resultatene vi får fra enkelttester. Da kan vi med stole enda mer på de resultatene vi får når enkelttester i en fysiologisk testlabb brukes for å måle endringer over tid [@hopkins2000]. 
+
+
+
+Faktorer som påvirker reproduserbarheten av testen gjelder dagsvariasjoner hos forsøkspersonene, men også
+variasjoner i måleinstrumentene, samt hvordan vi instruerer underveis. Derfor var
 gjennomføringen av testene et sentralt fokus i gjennomføringen for å sikre et best mulig mål på
-reliabiliteten til testen.
+reliabiliteten til testen. Basert på størrelsen på utvalget av testpersoner og vår erfaring med gjennomføring av fysiologisk tester så visste vi på forhånd at vi må være forsiktige med å trekke konklusjoner om målevariasjonen til oksygenanalysatoren som ble benyttet. Men vi får et svar på hvordan reproduserbarheten til testen er med de gitte premissene. 
 
 ## Metode
 
