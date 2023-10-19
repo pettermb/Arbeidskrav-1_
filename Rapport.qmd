@@ -96,14 +96,7 @@ reablitet2 |>
 
 ### Studiedesign
 
-Prosjektets testdager bestod av fire dager. Halvparten av dem ble testet hver dag, slik at
-deltakerne hadde én rolig dag mellom sine egne tester. Testdag 1 og 2 ble gjennomført som t1, mens
-testdag 3 og 4 ble gjennomført som t2. På hviledagen fikk alle deltakerne beskjed om at de kunne
-trene det de selv ønsket av rolig trening. Dette for å sikre at de var tilnærmet likt restituert før
-hver test. For alle deltakerne ble det forsøkt å gjøre testdagene så identiske som mulig i form av
-at forsøkspersonene fikk samme testleder på hver test (ett unntak pga. logistiske utfordringer for
-testleder), likt tidspunkt på døgnet ± 2 timer, beskjed om likt måltid og til samme tid før test
-[@hopkins2000].
+Prosjektets testdager bestod av fire dager, der halvparten av gruppa ble testen hver dag. Testdag 1 og 2 ble gjennomført som t1, mens testdag 3 og 4 ble gjennomført som t2. «Hviledagen» til forsøkspersonene ble avholdt til rolig trening eller hvile. Grunnen var for å sikre at de var tilnærmet likt restituert før hver test. Det ble forsøkt å gjøre testdagene så identiske som mulig for alle deltakerne, i form av bruk av samme testleder på hver test (ett unntak pga. logistiske utfordringer for testleder), likt tidspunkt på døgnet ± 2 timer, beskjed om likt måltid og til samme tid før test [@hopkins2000].
 
 ### Kalibrering - klargjøring til test
 
