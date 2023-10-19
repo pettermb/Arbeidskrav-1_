@@ -103,23 +103,8 @@ testleder), likt tidspunkt på døgnet ± 2 timer, beskjed om likt måltid og ti
 
 ### Kalibrering - klargjøring til test
 
-Før hver forsøksperson skulle starte sykkeltesten kalibrerte vi oxycon pro og Lode
-Excalibur-sykkelen. Vi sjekket at luftfuktigheten og temperaturen i rommet stemte overens med oxycon
-sin estimering. Videre gjennomførte vi volumkalibrering, og sørget for at verdiene for O2 og CO2 var
-godkjent (± 1 % i forskjell, og mellom 99.0 og 101.0). "Gas calibration" startet da gassflaska
-åpnes, og var ferdig når verdiene for O2 og CO2 lå på en verdi mellom -1.0 og 1.0, med en feilmargin
-på maksimalt 1.0. Hvis det var noe som ikke stemte, eller vi ikke fikk gode nok målinger gjorde vi
-den aktuelle kalibreringen på nytt. Den siste klargjøring av maskinen var å gjøre klart VO2-opptak i
-"Mixing Chamber". Vi kontrollerte at det stod "small mouthpiece" og "30 sek delta time" i vinduet,
-og klargjorde til opptak.
-
-Videre var det å klargjøre sykkelen ved å stille inn riktig sittestilling. Ved t1 ble dette gjort
-sammen med forsøksperson, mens ved t2 hadde vi lagret det gamle sittestillingen og kopierte denne.
-Riktig setehøyde og -lengde og styrehøyde og -lengde, samt riktig pedaltype og krankarm ble stilt
-inn.
-
-De siste forberedelsene var å klargjøre munnstykket, slange og neseklype med teip. I tillegg til å
-legge inn forsøkspersonen i datamaskinen med aktuell informasjon.
+Det ble gjennomført kalibrering av oxycon pro før test for hver forsøksperson. Det ble sørget for at luftfuktigheten og temperaturen i rommet stemte overens med oxycon sin estimering. Godkjenning av volum- og gass kalibrering ble satt til 1% for å minimere eventuelle feilmålinger.  
+I tillegg ble Lode Excalibur-sykkelen likt innstilt for hver person på t1 og t2. 
 
 ### Testprosedyre
 
@@ -133,10 +118,7 @@ kroppsvekt. Målet var å gjennomføre løftet så huritig som mulig, og kraftut
 muscle lab hastighetsmåler. Beste forsøk på hver belastning ble tellende. Vi går ikke noe mer inn på
 styrketesten, fordi det er på sykkeltesten vi har gjort analyser.
 
-Del 2 sykkeltester: Deltakerne gikk direkte fra styrketesten til sykkeltestene. Her gjennomførte de
-en tredelt test, som først bestod av to submaksimale drag, deretter en VO$_{2maks}$-test og til
-slutt en Maximal Accumulated Oxygen Deficit (MAOD)-test. Testene ble gjennomført på Lode Excalibur
-ergometersykkel.
+Del 2 sykkeltester: Deltakerne gikk direkte fra styrketesten til sykkeltestene. Her gjennomførte de en tredelt test, som først bestod av to submaksimale drag, deretter en VO$_{2maks}$-test og til slutt en Maximal Accumulated Oxygen Deficit (MAOD)-test. Grunnen til at vi kjørte de submaksimale dragene var for å estimere okysgenkrav på wattbelasning som ble syklet under MAOD-testen. 
 
 Under hele sykkeltesten prøvde vi å kjøre mest mulig lik tilbakemelding og engasjement hver gang.
 Det var lite tilbakemeldinger under de submaksimale dragene, og mye engasjement og kun nødvendig
