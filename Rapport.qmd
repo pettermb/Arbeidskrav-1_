@@ -19,14 +19,18 @@ bibliography: references/Literaturliste.bib
 
 ## Introduksjon
 
-Hensikten med denne studien er å finne ut hvor reproduserbar en VO$_{2maks}$-test på sykkel er. Dette er interessant fordi bedre reliabilitet betyr at vi kan stole enda mer på de resultatene vi får fra enkelttester. Da kan vi med stole enda mer på de resultatene vi får når enkelttester i en fysiologisk testlabb brukes for å måle endringer over tid [@hopkins2000]. 
+Hensikten med denne studien er å finne ut hvor reproduserbar en VO$_{2maks}$-test på sykkel er.
+Dette er interessant fordi bedre reliabilitet betyr at vi kan stole enda mer på de resultatene vi
+får fra enkelttester. Da kan vi med stole enda mer på de resultatene vi får når enkelttester i en
+fysiologisk testlabb brukes for å måle endringer over tid [@hopkins2000].
 
-
-
-Faktorer som påvirker reproduserbarheten av testen gjelder dagsvariasjoner hos forsøkspersonene, men også
-variasjoner i måleinstrumentene, samt hvordan vi instruerer underveis. Derfor var
+Faktorer som påvirker reproduserbarheten av testen gjelder dagsvariasjoner hos forsøkspersonene, men
+også variasjoner i måleinstrumentene, samt hvordan vi instruerer underveis. Derfor var
 gjennomføringen av testene et sentralt fokus i gjennomføringen for å sikre et best mulig mål på
-reliabiliteten til testen. Basert på størrelsen på utvalget av testpersoner og vår erfaring med gjennomføring av fysiologisk tester så visste vi på forhånd at vi må være forsiktige med å trekke konklusjoner om målevariasjonen til oksygenanalysatoren som ble benyttet. Men vi får et svar på hvordan reproduserbarheten til testen er med de gitte premissene. 
+reliabiliteten til testen. Basert på størrelsen på utvalget av testpersoner og vår erfaring med
+gjennomføring av fysiologisk tester så visste vi på forhånd at vi må være forsiktige med å trekke
+konklusjoner om målevariasjonen til oksygenanalysatoren som ble benyttet. Men vi får et svar på
+hvordan reproduserbarheten til testen er med de gitte premissene.
 
 ## Metode
 
@@ -103,8 +107,10 @@ testleder), likt tidspunkt på døgnet ± 2 timer, beskjed om likt måltid og ti
 
 ### Kalibrering - klargjøring til test
 
-Det ble gjennomført kalibrering av oxycon pro før test for hver forsøksperson. Det ble sørget for at luftfuktigheten og temperaturen i rommet stemte overens med oxycon sin estimering. Godkjenning av volum- og gass kalibrering ble satt til 1% for å minimere eventuelle feilmålinger.  
-I tillegg ble Lode Excalibur-sykkelen likt innstilt for hver person på t1 og t2. 
+Det ble gjennomført kalibrering av oxycon pro før test for hver forsøksperson. Det ble sørget for at
+luftfuktigheten og temperaturen i rommet stemte overens med oxycon sin estimering. Godkjenning av
+volum- og gass kalibrering ble satt til 1% for å minimere eventuelle feilmålinger.\
+I tillegg ble Lode Excalibur-sykkelen likt innstilt for hver person på t1 og t2.
 
 ### Testprosedyre
 
@@ -118,7 +124,10 @@ kroppsvekt. Målet var å gjennomføre løftet så huritig som mulig, og kraftut
 muscle lab hastighetsmåler. Beste forsøk på hver belastning ble tellende. Vi går ikke noe mer inn på
 styrketesten, fordi det er på sykkeltesten vi har gjort analyser.
 
-Del 2 sykkeltester: Deltakerne gikk direkte fra styrketesten til sykkeltestene. Her gjennomførte de en tredelt test, som først bestod av to submaksimale drag, deretter en VO$_{2maks}$-test og til slutt en Maximal Accumulated Oxygen Deficit (MAOD)-test. Grunnen til at vi kjørte de submaksimale dragene var for å estimere okysgenkrav på wattbelasning som ble syklet under MAOD-testen. 
+Del 2 sykkeltester: Deltakerne gikk direkte fra styrketesten til sykkeltestene. Her gjennomførte de
+en tredelt test, som først bestod av to submaksimale drag, deretter en VO$_{2maks}$-test og til
+slutt en Maximal Accumulated Oxygen Deficit (MAOD)-test. Grunnen til at vi kjørte de submaksimale
+dragene var for å estimere okysgenkrav på wattbelasning som ble syklet under MAOD-testen.
 
 Under hele sykkeltesten prøvde vi å kjøre mest mulig lik tilbakemelding og engasjement hver gang.
 Det var lite tilbakemeldinger under de submaksimale dragene, og mye engasjement og kun nødvendig
@@ -172,6 +181,8 @@ Etter MAOD-testen regnet vi ut VO2.max, oksygenkravet ved belastning under MAOD-
 totale okysgenkravet som måtte dekkes (L), akkumulert oksygenopptak på testene (L), akkumulert
 oksygengjeld og prosent av arbeidet som ble dekket anaerobt (%). Samtidig noterte vi ned hvor lenge
 personen syklet (i sekunder), makspuls og opplevd anstrengelse (Borg).
+
+Alle data i teksten i resultatkapitellet er presentert som gjennomsnitt &plusmn; standardavvik hvis ikke annet er oppgitt. 
 
 ## Resultater
 
