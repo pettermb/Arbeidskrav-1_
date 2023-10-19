@@ -9,7 +9,7 @@ header-includes:
   - \setmainfont{Times New Roman} 
   - \renewcommand{\normalsize}{\fontsize{12}{18}\selectfont} 
 editor_options: 
-  chunk_output_type: console 
+  chunk_output_type: console
 execute: 
   echo: false 
   warning: false 
