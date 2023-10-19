@@ -96,7 +96,13 @@ reablitet2 |>
 
 ### Studiedesign
 
-Prosjektets testdager bestod av fire dager, der halvparten av gruppa ble testen hver dag. Testdag 1 og 2 ble gjennomført som t1, mens testdag 3 og 4 ble gjennomført som t2. «Hviledagen» til forsøkspersonene ble avholdt til rolig trening eller hvile. Grunnen var for å sikre at de var tilnærmet likt restituert før hver test. Det ble forsøkt å gjøre testdagene så identiske som mulig for alle deltakerne, i form av bruk av samme testleder på hver test (ett unntak pga. logistiske utfordringer for testleder), likt tidspunkt på døgnet ± 2 timer, beskjed om likt måltid og til samme tid før test [@hopkins2000].
+Prosjektets testdager bestod av fire dager, der halvparten av gruppa ble testen hver dag. Testdag 1
+og 2 ble gjennomført som t1, mens testdag 3 og 4 ble gjennomført som t2. «Hviledagen» til
+forsøkspersonene ble avholdt til rolig trening eller hvile. Grunnen var for å sikre at de var
+tilnærmet likt restituert før hver test. Det ble forsøkt å gjøre testdagene så identiske som mulig
+for alle deltakerne, i form av bruk av samme testleder på hver test (ett unntak pga. logistiske
+utfordringer for testleder), likt tidspunkt på døgnet ± 2 timer, beskjed om likt måltid og til samme
+tid før test [@hopkins2000].
 
 ### Kalibrering - klargjøring til test
 
@@ -109,7 +115,7 @@ I tillegg ble Lode Excalibur-sykkelen likt innstilt for hver person på t1 og t2
 
 Deltakerne startet med en syv minutters lang oppvarming på ergometer sykkel, med en gradvis økning i
 intensitet. Intensiteten ble styrt etter Borgs 6-20 skala. De syklet 3 min tilsvarende opplevd
-anstrengelse på 11, 2 min på 13 og 2 min på 15/16 på Borgs 6-20 skala [@hopkins2000].
+anstrengelse på 11, 2 min på 13 og 2 min på 15/16 på Borgs 6-20 skala [@borg1998].
 
 Del 1 styrketest: Etter oppvarming gjennomførte deltakerne en kort styrketest, i form av knebøy
 power test. Den bestod av tre løft med 20 kg, tre løft med henholdsvis 30-, 60- og 75 % av egen
@@ -174,8 +180,6 @@ Etter MAOD-testen regnet vi ut VO2.max, oksygenkravet ved belastning under MAOD-
 totale okysgenkravet som måtte dekkes (L), akkumulert oksygenopptak på testene (L), akkumulert
 oksygengjeld og prosent av arbeidet som ble dekket anaerobt (%). Samtidig noterte vi ned hvor lenge
 personen syklet (i sekunder), makspuls og opplevd anstrengelse (Borg).
-
-Alle data i teksten i resultatkapitellet er presentert som gjennomsnitt &plusmn; standardavvik hvis ikke annet er oppgitt. 
 
 ## Resultater
 
