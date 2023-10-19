@@ -174,7 +174,7 @@ skulle starte. Deltakerne syklet så lenge som mulig, og testen var over når tr
 
 ### Tiltak for å sikre god reliabilitet
 
-For å opprettholde en størst mulig grad av validitet og reliabilitet er det nødevndig å ta stilling til ytre variabler som kan påvirke resultatet. Ved å ta hensyn til potensielle forstyrrende variabler reduseres risikoen for feilmålinger, og gjør funnene mer pålitelige. KILDE(!!) 
+For å opprettholde en størst mulig grad av validitet og reliabilitet er det nødevndig å ta stilling til ytre variabler som kan påvirke resultatet. Ved å ta hensyn til potensielle forstyrrende variabler reduseres risikoen for feilmålinger, og gjør funnene mer pålitelige [@halperin2015]. 
 
 For å sikre en god reliabilitet på de fysiologiske testene gjorde vi flere tiltak for å redusere
 risikoen for forstyrrende variabler som kan påvirke resultatene. For det første ble begge testene
