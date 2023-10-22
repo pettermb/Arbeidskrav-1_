@@ -231,3 +231,8 @@ instruksjoner om utførelsen av testene og målet med hver test.
 
 Det ble også kjørt kalibrering av oxycon pro før hver test, og vi satte godkjent kalibrering på
 volum til ± 1 %, og godkjent kalibrering av gass med en feilmargin på maksimalt ± 1.0 %.
+
+I vårt utvalg av forsøkspersoner, hadde alle gjennomført testing på et fysiologisk laboratorium før. De var derfor kjent med hvordan det var å puste gjennom et munnstykke og slange, men ingen hadde erfaring med testing på sykkel. Dermed ble t1 mye læring for deltakerne. For å sikre enda bedre reabilitet burde vi ha gjennomført en sykkeltest på forhånd, slik at deltakerne hadde blitt kjent med belastningene på de ulike testene. 
+
+Testlederne hadde også veldig ulik erfaring med testing av andre personer. Dette førte til noen feil i gjennomføringen, og noen avvik fra protokollen. Feilene var ikke noe forsøkspersonene la merke til underveis, men som kan ha hatt innvirkning på testresultatet. Vi ser at det kunne vært gjennomført pilottester for å sikre større trygghet rundt det å være testleder, og for å ha sikra enda bedre reabilitet. 
+
