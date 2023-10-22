@@ -1,0 +1,73 @@
+---
+title: "Tabell karakteristikker"
+format: pdf 
+editor_options: 
+  chunk_output_type: console
+---
+```{r}
+#| echo: false 
+#| warning: false
+
+library(readxl) 
+reablitet2 <- read_excel("data/reablitet2.xls") 
+invisible(Sys.setlocale(category = "LC_ALL", locale = "en_US.UTF-8"))
+```
+
+
+```{r}
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| output: false
+
+library(tidyverse) 
+library(gt)
+```
+
+
+
+
+```{r} 
+#| echo: false 
+
+reablitet2 |> 
+  filter(timepoint == "t1") |> 
+  select(timepoint, age:bodymass, vo2.rel.max, w.max) |> 
+  pivot_longer(cols = !timepoint,
+               names_to = "variabler", 
+               values_to = "verdier") |> 
+  mutate(variabel = factor(variabler, 
+                           levels = c("age", 
+                                      "bodyheight", 
+                                      "bodymass", 
+                                      "vo2.rel.max", 
+                                      "w.max"), 
+                           labels = c("Alder (år)", 
+                                      "Høyde (cm)", 
+                                      "Vekt (kg)", 
+                                      "VO2maks", 
+                                      "Wmaks")))  |> 
+  
+  summarise(m = mean(verdier), 
+            s = sd(verdier), 
+            .by = variabel) |> 
+  gt() |> 
+  fmt_number(decimals = 1) |> 
+  cols_merge(columns = c(m, s), 
+             pattern = "{1} \u00b1 {2}") |> 
+  cols_label(variabel = "") |> 
+  cols_label(m = "") |> 
+  
+  tab_footnote(footnote = md("*Dataene er presentert som gjennomsnitt &plusmn; standardavvik.*")) |> 
+  
+  tab_header("Karakteristikker av forsøkspersonene basert på første test") 
+
+
+
+```
+
+
+
+
+
+
