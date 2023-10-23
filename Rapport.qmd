@@ -97,7 +97,13 @@ reablitet2 |>
 
 ### Studiedesign
 
-Prosjektets testdager bestod av fire dager, der halvparten av gruppa ble testen hver dag. Testdag 1 og 2 ble gjennomført som t1, mens testdag 3 og 4 ble gjennomført som t2. «Hviledagen» til forsøkspersonene ble avholdt til rolig trening eller hvile. Grunnen var for å sikre at de var tilnærmet likt restituert før hver test. Det ble forsøkt å gjøre testdagene så identiske som mulig for alle deltakerne, i form av bruk av samme testleder på hver test (ett unntak pga. logistiske utfordringer for testleder), likt tidspunkt på døgnet ± 2 timer, beskjed om likt måltid og til samme tid før test [@hopkins2000].
+Prosjektets testdager bestod av fire dager, der halvparten av gruppa ble testen hver dag. Testdag 1
+og 2 ble gjennomført som test 1 (t1), mens testdag 3 og 4 ble gjennomført som test 2 (t2). «Hviledagen» til
+forsøkspersonene ble avholdt til rolig trening eller hvile. Grunnen var for å sikre at de var
+tilnærmet likt restituert før hver test. Det ble forsøkt å gjøre testdagene så identiske som mulig
+for alle deltakerne, i form av bruk av samme testleder på hver test (ett unntak pga. logistiske
+utfordringer for testleder), likt tidspunkt på døgnet ± 2 timer, beskjed om likt måltid og til samme
+tid før test [@hopkins2000].
 
 ### Kalibrering - klargjøring til test
 
@@ -110,7 +116,7 @@ I tillegg ble Lode Excalibur-sykkelen likt innstilt for hver person på t1 og t2
 
 Deltakerne startet med en syv minutters lang oppvarming på ergometer sykkel, med en gradvis økning i
 intensitet. Intensiteten ble styrt etter Borgs 6-20 skala. De syklet 3 min tilsvarende opplevd
-anstrengelse på 11, 2 min på 13 og 2 min på 15/16 på Borgs 6-20 skala [@hopkins2000].
+anstrengelse på 11, 2 min på 13 og 2 min på 15/16 på Borgs 6-20 skala [@borg1998].
 
 Del 1 styrketest: Etter oppvarming gjennomførte deltakerne en kort styrketest, i form av knebøy
 power test. Den bestod av tre løft med 20 kg, tre løft med henholdsvis 30-, 60- og 75 % av egen
@@ -176,8 +182,6 @@ totale okysgenkravet som måtte dekkes (L), akkumulert oksygenopptak på testene
 oksygengjeld og prosent av arbeidet som ble dekket anaerobt (%). Samtidig noterte vi ned hvor lenge
 personen syklet (i sekunder), makspuls og opplevd anstrengelse (Borg).
 
-Alle data i teksten i resultatkapitellet er presentert som gjennomsnitt &plusmn; standardavvik hvis ikke annet er oppgitt. 
-
 ## Resultater
 
 For relativ VO$_{2maks}$ var differansen mellom testene 0.62 ± 2.41 $ml·kg^{-1}·min^{-1}$. Med en
@@ -230,3 +234,8 @@ instruksjoner om utførelsen av testene og målet med hver test.
 
 Det ble også kjørt kalibrering av oxycon pro før hver test, og vi satte godkjent kalibrering på
 volum til ± 1 %, og godkjent kalibrering av gass med en feilmargin på maksimalt ± 1.0 %.
+
+I vårt utvalg av forsøkspersoner, hadde alle gjennomført testing på et fysiologisk laboratorium før. De var derfor kjent med hvordan det var å puste gjennom et munnstykke og slange, men ingen hadde erfaring med testing på sykkel. Dermed ble t1 mye læring for deltakerne. For å sikre enda bedre reabilitet burde vi ha gjennomført en sykkeltest på forhånd, slik at deltakerne hadde blitt kjent med belastningene på de ulike testene. 
+
+Testlederne hadde også veldig ulik erfaring med testing av andre personer. Dette førte til noen feil i gjennomføringen, og noen avvik fra protokollen. Feilene var ikke noe forsøkspersonene la merke til underveis, men som kan ha hatt innvirkning på testresultatet. Vi ser at det kunne vært gjennomført pilottester for å sikre større trygghet rundt det å være testleder, og for å ha sikra enda bedre reabilitet. 
+
