@@ -98,12 +98,12 @@ reablitet2 |>
 ### Studiedesign
 
 Prosjektets testdager bestod av fire dager, der halvparten av gruppa ble testen hver dag. Testdag 1
-og 2 ble gjennomført som test 1 (t1), mens testdag 3 og 4 ble gjennomført som test 2 (t2). «Hviledagen» til
-forsøkspersonene ble avholdt til rolig trening eller hvile. Grunnen var for å sikre at de var
-tilnærmet likt restituert før hver test. Det ble forsøkt å gjøre testdagene så identiske som mulig
-for alle deltakerne, i form av bruk av samme testleder på hver test (ett unntak pga. logistiske
-utfordringer for testleder), likt tidspunkt på døgnet ± 2 timer, beskjed om likt måltid og til samme
-tid før test [@hopkins2000].
+og 2 ble gjennomført som test 1 (t1), mens testdag 3 og 4 ble gjennomført som test 2 (t2).
+«Hviledagen» til forsøkspersonene ble avholdt til rolig trening eller hvile. Grunnen var for å sikre
+at de var tilnærmet likt restituert før hver test. Det ble forsøkt å gjøre testdagene så identiske
+som mulig for alle deltakerne, i form av bruk av samme testleder på hver test (ett unntak pga.
+logistiske utfordringer for testleder), likt tidspunkt på døgnet ± 2 timer, beskjed om likt måltid
+og til samme tid før test [@hopkins2000].
 
 ### Kalibrering - klargjøring til test
 
@@ -237,7 +237,15 @@ instruksjoner om utførelsen av testene og målet med hver test.
 Det ble også kjørt kalibrering av oxycon pro før hver test, og vi satte godkjent kalibrering på
 volum til ± 1 %, og godkjent kalibrering av gass med en feilmargin på maksimalt ± 1.0 %.
 
-I vårt utvalg av forsøkspersoner, hadde alle gjennomført testing på et fysiologisk laboratorium før. De var derfor kjent med hvordan det var å puste gjennom et munnstykke og slange, men ingen hadde erfaring med testing på sykkel. Dermed ble t1 mye læring for deltakerne. For å sikre enda bedre reabilitet burde vi ha gjennomført en sykkeltest på forhånd, slik at deltakerne hadde blitt kjent med belastningene på de ulike testene. 
+\<\<\<\<\<\<\< HEAD I vårt utvalg av forsøkspersoner, hadde alle gjennomført testing på et
+fysiologisk testlabratorie før. Så dei var kjent med å puste gjennom slage, men det var liten eller
+ingen erfaring ved slik testing på sykkel. Dermed ble t1 mye læring for mange av personene, så for å
+sikre endå betre realbilitet hadde det vert viktig å lett forsøkspersone bli kjent med det å
+gjennomføre en sykkeltest på forhånd. Et punkt på dette som var usikkert for flere var hvordan de
+ulike belastningene følt no som kunne vert et enkelt tiltak å gjennomføre.
 
-Testlederne hadde også veldig ulik erfaring med testing av andre personer. Dette førte til noen feil i gjennomføringen, og noen avvik fra protokollen. Feilene var ikke noe forsøkspersonene la merke til underveis, men som kan ha hatt innvirkning på testresultatet. Vi ser at det kunne vært gjennomført pilottester for å sikre større trygghet rundt det å være testleder, og for å ha sikra enda bedre reabilitet. 
-
+Studiens testledere hadde også en no ulik erfaring ved å være testledere. No som ført til noen feil
+i gjennomføringen av protokollen. Dette var feil som forsøkspersonene ikke oppfattet under veis i
+deres tester, men som kan ha hatt invirkning på testresultatet. Vi ser at ved senere studier vill
+det være hensiktsmessig for reabiliteten til testene, at vi gjennomfører pilottesting, for å bli
+bedre kjent med gjennomføring.
