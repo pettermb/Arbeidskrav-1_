@@ -232,12 +232,12 @@ instruksjoner om utførelsen av testene og målet med hver test.
 Det ble også kjørt kalibrering av oxycon pro før hver test, og vi satte godkjent kalibrering på
 volum til ± 1 %, og godkjent kalibrering av gass med en feilmargin på maksimalt ± 1.0 %.
 
-I vårt utvalg av forsøkspersoner, hadde alle gjennomført testing på et fysiologisk testlabratorie
-før. Så dei var kjent med å puste gjennom slage, men det var liten eller ingen erfaring ved slik
-testing på sykkel. Dermed ble t1 mye læring for mange av personene, så for å sikre endå betre
-realbilitet hadde det vert viktig å lett forsøkspersone bli kjent med det å gjennomføre en
-sykkeltest på forhånd. Et punkt på dette som var usikkert for flere var hvordan de ulike
-belastningene følt no som kunne vert et enkelt tiltak å gjennomføre.
+\<\<\<\<\<\<\< HEAD I vårt utvalg av forsøkspersoner, hadde alle gjennomført testing på et
+fysiologisk testlabratorie før. Så dei var kjent med å puste gjennom slage, men det var liten eller
+ingen erfaring ved slik testing på sykkel. Dermed ble t1 mye læring for mange av personene, så for å
+sikre endå betre realbilitet hadde det vert viktig å lett forsøkspersone bli kjent med det å
+gjennomføre en sykkeltest på forhånd. Et punkt på dette som var usikkert for flere var hvordan de
+ulike belastningene følt no som kunne vert et enkelt tiltak å gjennomføre.
 
 Studiens testledere hadde også en no ulik erfaring ved å være testledere. No som ført til noen feil
 i gjennomføringen av protokollen. Dette var feil som forsøkspersonene ikke oppfattet under veis i
