@@ -30,7 +30,8 @@ gjennomføringen av testene et sentralt fokus i gjennomføringen for å sikre et
 reliabiliteten til testen. Basert på størrelsen på utvalget av testpersoner og vår erfaring med
 gjennomføring av fysiologisk tester så visste vi på forhånd at vi må være forsiktige med å trekke
 konklusjoner om målevariasjonen til oksygenanalysatoren som ble benyttet. Men vi får et svar på
-hvordan reproduserbarheten til testen er med de gitte premissene.
+hvordan reproduserbarheten til testen er med de gitte premissene. 
+
 
 ## Metode
 
@@ -174,12 +175,14 @@ Etter å ha gjennomført testene samlet vi inn dataene vi skulle bruke for å gj
 analyser. Vi noterte ned VO2 på de submaksimale dragene, og regnet ut VO2.rel.max og VO2.max på
 VO2maks-testen i excel. Samtidig noterte vi ned andre verdifulle variabler etter test, slik som
 hr.max, W.max, rer.max, bf.max, VE.max, hvor lenge personen syklet, og hvilken watt personen
-avsluttet på, samt opplevd anstrengelse (Borg).
+avsluttet på, samt opplevd anstrengelse [borg1998].
 
 Etter MAOD-testen regnet vi ut VO2.max, oksygenkravet ved belastning under MAOD-test (L/min), det
 totale okysgenkravet som måtte dekkes (L), akkumulert oksygenopptak på testene (L), akkumulert
 oksygengjeld og prosent av arbeidet som ble dekket anaerobt (%). Samtidig noterte vi ned hvor lenge
-personen syklet (i sekunder), makspuls og opplevd anstrengelse (Borg).
+personen syklet (i sekunder), makspuls og opplevd anstrengelse [borg1998]. 
+
+Alle data i resultatkapittelet er presentert som gjennomsnitt &plusmn; standardavvik. 
 
 ## Resultater
 
@@ -190,19 +193,21 @@ variabelen.
 For W$_{maks}$ og ventilasjonen er differansen mellom testene henholdsvis 5.71 ± 13.80 W og 2.21 ±
 11.42 l/min. Den typiske målefeilen var hhv. 9.8 og 8.1, mens cv var 2.4 og 4.
 
-Figuren under viser at det er en korrelasjon mellom effekten de har på siste minuttet av makstesten
-og relativ VO$_{2maks}$ ved begge testene, som er å forvente.
+Figuren under viser relativ VO$_{2maks}$ ved de to testene. Og linjen går fra gjennomsnittet ved t1 til gjennomsnittet ved t2.
 
 ```{r}
 #| echo: false 
 #| warning: false 
 
-ggplot(data = reablitet2, aes(x = w.max, 
-                              y = vo2.rel.max, 
-                              color = timepoint)) + 
-  geom_point() + 
-  geom_smooth(method = "lm", se = FALSE, formula = y~x) +
-  facet_wrap(~ timepoint) 
+
+reablitet2 |> 
+  select(id, timepoint, vo2.rel.max) |> 
+  group_by(timepoint) |> 
+  ggplot(aes(timepoint, vo2.rel.max)) + geom_point() + 
+  geom_abline(intercept = 66.2, 
+              slope = -0.6) 
+
+
 ```
 
 ## Diskusjon
