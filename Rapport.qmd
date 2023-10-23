@@ -187,13 +187,12 @@ Alle data i resultatkapittelet er presentert som gjennomsnitt &plusmn; standarda
 ## Resultater
 
 For relativ VO$_{2maks}$ var differansen mellom testene 0.62 ± 2.41 $ml·kg^{-1}·min^{-1}$. Med en
-typisk målefeil på 1.7. I prosentvis forskjell mellom testene var det 0.94 ± 3.65 % for denne
-variabelen.
+typisk målefeil på 1.7, og cv på 2.6. I prosent var det 0.94 ± 3.65 % forskjell. 
 
 For W$_{maks}$ og ventilasjonen er differansen mellom testene henholdsvis 5.71 ± 13.80 W og 2.21 ±
 11.42 l/min. Den typiske målefeilen var hhv. 9.8 og 8.1, mens cv var 2.4 og 4.
 
-Figuren under viser relativ VO$_{2maks}$ ved de to testene. Og linjen går fra gjennomsnittet ved t1 til gjennomsnittet ved t2.
+Figuren under viser relativ VO$_{2maks}$ ved de to testene. Og linjen går fra gjennomsnittet ved t1 (66.2 &plusmn; 7.2) til gjennomsnittet ved t2 (65.6 &plusmn; 7.1). 
 
 ```{r}
 #| echo: false 
@@ -202,15 +201,17 @@ Figuren under viser relativ VO$_{2maks}$ ved de to testene. Og linjen går fra g
 
 reablitet2 |> 
   select(id, timepoint, vo2.rel.max) |> 
-  group_by(timepoint) |> 
   ggplot(aes(timepoint, vo2.rel.max)) + geom_point() + 
   geom_abline(intercept = 66.2, 
               slope = -0.6) 
 
-
 ```
 
-## Diskusjon
+## Diskusjon 
+
+### Diskusjon av resultater 
+
+
 
 ### Tiltak for å sikre god reliabilitet
 
