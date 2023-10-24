@@ -174,7 +174,7 @@ Etter å ha gjennomført testene samlet vi inn dataene vi skulle bruke for å gj
 analyser. Vi noterte ned VO2 på de submaksimale dragene, og regnet ut VO2.rel.max og VO2.max på
 VO2maks-testen i excel. Samtidig noterte vi ned andre verdifulle variabler etter test, slik som
 hr.max, W.max, rer.max, bf.max, VE.max, hvor lenge personen syklet, og hvilken watt personen
-avsluttet på, samt opplevd anstrengelse \[borg1998\].
+avsluttet på, samt opplevd anstrengelse \[borg1998\]. 
 
 Etter MAOD-testen regnet vi ut VO2.max, oksygenkravet ved belastning under MAOD-test (L/min), det
 totale okysgenkravet som måtte dekkes (L), akkumulert oksygenopptak på testene (L), akkumulert
@@ -191,12 +191,8 @@ typisk målefeil på 1.7, og cv på 2.6. I prosent var det 0.94 ± 3.65 % forskj
 For W$_{maks}$ og ventilasjonen er differansen mellom testene henholdsvis 5.71 ± 13.80 W og 2.21 ±
 11.42 l/min. Den typiske målefeilen var hhv. 9.8 og 8.1, mens cv var 2.4 og 4.
 
-<<<<<<< HEAD
 Figuren under viser relativ VO$_{2maks}$ ved de to testene. Og linjen går fra gjennomsnittet ved t1 (66.2 &plusmn; 7.2) til gjennomsnittet ved t2 (65.6 &plusmn; 7.1). 
-=======
-Figuren under viser relativ VO$_{2maks}$ ved de to testene. Og linjen går fra gjennomsnittet ved t1
-til gjennomsnittet ved t2.
->>>>>>> e23f1c4a987004a9d0338efa16e4b6bb45eccb6f
+
 
 ```{r}
 #| echo: false 
@@ -215,44 +211,19 @@ reablitet2 |>
 
 ### Diskusjon av resultater 
 
+8 forsøkspersoner er et lite utvalg når vi skal måle reliabiliteten til en test [hopkins]. Ved første test var VO$_{2maks}$ på 66,2 +- 7,2 ml/kg/min, noe som gjør at de kan defineres som godt trente. Godt trente utøvere vil de også produsere høyere watt verdier. Her ser vi at med bakgrunn i de høyere verdiene, vil vi få ett større standaravvik som er noe som vi kan forvente ettersom vi har bedre forsøkspersoner. (Hopkin
 
+### Tiltak for å sikre god reliabilitet 
 
-### Tiltak for å sikre god reliabilitet
+For å opprettholde en størst mulig grad av validitet og reliabilitet er det nødevndig å ta stilling til ytre variabler som kan påvirke resultatet. Ved å ta hensyn til potensielle forstyrrende variabler reduseres risikoen for feilmålinger, og gjør funnene mer pålitelige [@halperin2015]. 
 
-For å opprettholde en størst mulig grad av validitet og reliabilitet er det nødevndig å ta stilling
-til ytre variabler som kan påvirke resultatet. Ved å ta hensyn til potensielle forstyrrende
-variabler reduseres risikoen for feilmålinger, og gjør funnene mer pålitelige [@halperin2015].
+For å sikre en god reliabilitet på de fysiologiske testene gjorde vi flere tiltak for å redusere risikoen for forstyrrende variabler som kan påvirke resultatene. For det første ble begge testene kjørt på så nøyaktig lik måte som mulig, med en standardisert protokoll. Testene for hver forsøksperson ble avholdt på omtrent samme tidspunkt (± 2 timer). Vi ga også beskjed om at de bare kunne trene rolig dagen før t1, og dagen i mellom testene. På den måten sikret vi at ingen var treningspåvirket og forhåpentligvis likt restituert før hver test. Deltakerne fikk også beskjed om at siste måltid før begge testene skulle være like, og til omtrent samme tidspunkt. 
 
-For å sikre en god reliabilitet på de fysiologiske testene gjorde vi flere tiltak for å redusere
-risikoen for forstyrrende variabler som kan påvirke resultatene. For det første ble begge testene
-kjørt på så nøyaktig lik måte som mulig, med en standardisert protokoll. Testene for hver
-forsøksperson ble avholdt på omtrent samme tidspunkt (± 2 timer). Vi ga også beskjed om at de bare
-kunne trene rolig dagen før t1, og dagen i mellom testene. På den måten sikret vi at ingen var
-treningspåvirket og forhåpentligvis likt restituert før hver test. Deltakerne fikk også beskjed om
-at siste måltid før begge testene skulle være like, og til omtrent samme tidspunkt.
+Vi kjørte også samme tråkkfrekvensen ved første submaksimale belastningstrinn og ved MAOD-testen, og dette ble kopiert ved t2. Det var lik belastning og lengde på pause før hver MAOD-test begge dager uansett utfall på VO$_{2maks}$-testen. I tillegg ble hele sykkeltesten gjennomført sittende. 
 
-Vi kjørte også samme tråkkfrekvensen ved første submaksimale belastningstrinn og ved MAOD-testen, og
-dette ble kopiert ved t2. Det var lik belastning og lengde på pause før hver MAOD-test begge dager
-uansett utfall på VO$_{2maks}$-testen. I tillegg ble hele sykkeltesten gjennomført sittende.
+Vi valgte også å ha samme testleder for hver enkelt forsøksperson ved både t1 og t2. Den muntlige oppmuntringen og tilbakemeldingene underveis på testene var lik, og vi sørget for å gi like instruksjoner om utførelsen av testene og målet med hver test.
+Det ble også kjørt kalibrering av oxycon pro før hver test, og vi satte godkjent kalibrering på volum til ± 1 %, og godkjent kalibrering av gass med en feilmargin på maksimalt ± 1.0 %.
+I vårt utvalg av forsøkspersoner, hadde alle gjennomført testing på et fysiologisk testlabratorie før. Så dei var kjent med å puste gjennom slage, men det var liten eller ingen erfaring ved slik testing på sykkel. Dermed ble t1 mye læring for mange av personene, så for å sikre endå betre realbilitet hadde det vert viktig å lett forsøkspersone bli kjent med det å gjennomføre en sykkeltest på forhånd. Et punkt på dette som var usikkert for flere var hvordan de ulike belastningene føltes noe som kunne vert et enkelt tiltak å gjennomføre. 
 
-Vi valgte også å ha samme testleder for hver enkelt forsøksperson ved både t1 og t2. Den muntlige
-oppmuntringen og tilbakemeldingene underveis på testene var lik, og vi sørget for å gi like
-instruksjoner om utførelsen av testene og målet med hver test.
+Studiens testledere hadde også en noe ulik erfaring ved å være testledere. No som ført til noen feil i gjennomføringen av protokollen. Dette var feil som forsøkspersonene ikke oppfattet under veis i deres tester, men som kan ha hatt innvirkning på testresultatet. Vi ser at ved senere studier vill det være hensiktsmessig for reabiliteten til testene, at vi gjennomfører pilottesting, for å bli bedre kjent med gjennomføring. Dette vil i stor grad være det som i litraturen blir referert til som tilfeldig forandring. 
 
-Det ble også kjørt kalibrering av oxycon pro før hver test, og vi satte godkjent kalibrering på
-volum til ± 1 %, og godkjent kalibrering av gass med en feilmargin på maksimalt ± 1.0 %.
-
-\<\<\<\<\<\<\< HEAD
-
-I vårt utvalg av forsøkspersoner, hadde alle gjennomført testing på et fysiologisk testlabratorie
-før. Så dei var kjent med å puste gjennom slage, men det var liten eller ingen erfaring ved slik
-testing på sykkel. Dermed ble t1 mye læring for mange av personene, så for å sikre endå betre
-realbilitet hadde det vert viktig å lett forsøkspersone bli kjent med det å gjennomføre en
-sykkeltest på forhånd. Et punkt på dette som var usikkert for flere var hvordan de ulike
-belastningene følt no som kunne vert et enkelt tiltak å gjennomføre.
-
-Studiens testledere hadde også en no ulik erfaring ved å være testledere. No som ført til noen feil
-i gjennomføringen av protokollen. Dette var feil som forsøkspersonene ikke oppfattet under veis i
-deres tester, men som kan ha hatt invirkning på testresultatet. Vi ser at ved senere studier vill
-det være hensiktsmessig for reabiliteten til testene, at vi gjennomfører pilottesting, for å bli
-bedre kjent med gjennomføring.
